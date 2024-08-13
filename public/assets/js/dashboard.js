@@ -19,6 +19,14 @@ let cards = [
             "Watch this incredible film made by some incredible people!",
     },
     {
+        background: "https://images.alphacoders.com/586/thumb-1920-586902.jpg",
+        display_background:
+            "//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages2.alphacoders.com%2F845%2F84502.jpg&f=1&nofb=1",
+        title: "Inception",
+        description:
+            "Watch this incredible film made by some incredible people!",
+    },
+    {
         background:
             "//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.wallpapersafari.com%2F41%2F1%2Fhj197K.jpg&f=1&nofb=1",
         display_background:

@@ -52,8 +52,23 @@
         </div>
         <div class="mid">
             <div class="row align-items-center content-area">
-                <h2 class="content-title">Apa itu SIREM?</h2>
+                <div class="left-column">
+                    <h2 class="content-title">Apa itu SIREM?</h2>
+                    <p class="description-title">SIREM (Sistem Informasi Rencana Pembelajaran) adalah platform inovatif
+                        yang dirancang untuk
+                        membantu orang tua, guru, dan tenaga pendidik mengidentifikasi potensi gangguan belajar seperti
+                        disleksia, disgrafia, diskalkulia dan ADHD pada anak-anak. Dengan alat diagnostik yang canggih
+                        dan mudah digunakan, SIREM memberikan hasil yang akurat dan rekomendasi langkah-langkah
+                        selanjutnya untuk mendukung perkembangan belajar anak.</p>
+                </div>
+                <div class="right-column">
+                    <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <img src="assets/images/what.png" alt="">
+                    </div>
+                </div>
             </div>
+
+
             <div class="content-area" id="releases">
                 <h2 class="content-title">NEW RELEASES</h2>
                 <div class="card-carousel">
@@ -88,10 +103,104 @@
             <div class="content-area">
                 <h2 class="content-title">THRILLER</h2>
                 <div class="card-carousel">
-
                 </div>
             </div>
         </div>
+
+        {{-- content macam-macam --}}
+        <div class="container2">
+            <h2 class="title">Macam-macam Gangguan Belajar</h2>
+            <div class="card2-container">
+                <div class="card2">
+                    <div class="icon">
+                        <img src="assets/images/macam.png" alt="Icon">
+                    </div>
+                    <h3>Disleksia</h3>
+                    <p>Disleksia adalah gangguan belajar yang mempengaruhi kemampuan seseorang dalam membaca dan
+                        memahami teks.</p>
+                </div>
+                <div class="card2">
+                    <div class="icon">
+                        <img src="assets/images/macam.png" alt="Icon">
+                    </div>
+                    <h3>Diskalkulia</h3>
+                    <p>Diskalkulia adalah gangguan belajar yang mempengaruhi kemampuan seseorang dalam memahami dan
+                        bekerja dengan angka.</p>
+                </div>
+                <div class="card2">
+                    <div class="icon">
+                        <img src="assets/images/macam.png" alt="Icon">
+                    </div>
+                    <h3>Disgrafia</h3>
+                    <p>Disgrafia adalah gangguan belajar yang mempengaruhi kemampuan menulis tangan dan ejaan.</p>
+                </div>
+                <div class="card2">
+                    <div class="icon">
+                        <img src="assets/images/macam.png" alt="Icon">
+                    </div>
+                    <h3>ADHD</h3>
+                    <p>ADHD adalah gangguan yang mempengaruhi perhatian, kontrol impuls, dan tingkat aktivitas
+                        seseorang.</p>
+                </div>
+            </div>
+        </div>
+        {{-- content macam macam end --}}
+
+        {{-- content why sirem start --}}
+        <div class="row align-items-center content-area">
+            <div class="left-column">
+                <h2 class="content-title">Mengapa menggunakan SIREM?</h2>
+                <p class="description-title">SIREM menawarkan berbagai keunggulan yang membuatnya pilihan terbaik untuk
+                    mendukung pendidikan anak:</p>
+            </div>
+            <div class="card2">
+                <div class="icon">
+                    <img src="assets/images/macam.png" alt="Icon">
+                </div>
+                <h3>Disleksia</h3>
+                <p>Disleksia adalah gangguan belajar yang mempengaruhi kemampuan seseorang dalam membaca dan
+                    memahami teks.</p>
+            </div>
+            <div class="right-column">
+                <div class="card2-container">
+                    <div class="bottom-column">
+
+                        <div class="card2">
+                            <div class="icon">
+                                <img src="assets/images/macam.png" alt="Icon">
+                            </div>
+                            <h3>Diskalkulia</h3>
+                            <p>Diskalkulia adalah gangguan belajar yang mempengaruhi kemampuan seseorang dalam memahami
+                                dan
+                                bekerja dengan angka.</p>
+                        </div>
+
+                        <div class="card2">
+                            <div class="icon">
+                                <img src="assets/images/macam.png" alt="Icon">
+                            </div>
+                            <h3>Disgrafia</h3>
+                            <p>Disgrafia adalah gangguan belajar yang mempengaruhi kemampuan menulis tangan dan ejaan.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="card2">
+                        <div class="icon">
+                            <img src="assets/images/macam.png" alt="Icon">
+                        </div>
+                        <h3>ADHD</h3>
+                        <p>ADHD adalah gangguan yang mempengaruhi perhatian, kontrol impuls, dan tingkat aktivitas
+                            seseorang.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        {{-- content why sirem end --}}
         <div class="bottom">
             <div class="btn-row">
                 <h4>Help Center</h4>
