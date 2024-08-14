@@ -43,6 +43,7 @@ a {
 .logo {
     font-family: "Titan One", sans-serif;
     font-size: 32px;
+    font-weight: 700;
     color: white;
 }
 
@@ -136,8 +137,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 5px solid transparent;
-    border-bottom-color: transparent;
+    border: 5px solid transparent;
     transition: border-bottom-color 0.3s;
 }
 
@@ -150,7 +150,7 @@ a {
 /* navbar teks */
 .main-nav .button-container h2 {
     font-family: "Inter", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: white;
 }
@@ -171,15 +171,15 @@ a {
 }
 
 .login {
-    border-color: white;
-    background-color: transparent;
+    border: 0.5px solid white;
     cursor: pointer;
 }
 
 .login:hover {
     background-color: var(--blue-selected);
-    border-color: var(--blue-selected);
+    border: 0.5px solid var(--blue-selected);
     cursor: pointer;
+    transition: ease-in 0.2s;
 }
 
 .right-nav .button-container h2 {
@@ -212,7 +212,7 @@ a {
 /* TOP SECTION */
 .top {
     width: 100%;
-    min-height: 250px;
+    min-height: 450px;
     display: flex;
     align-items: center;
     background-image: url(../images/dashboard.png);
@@ -221,16 +221,8 @@ a {
 }
 
 .top .image-container {
-    width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-        0deg,
-        rgb(255, 255, 255) 0%,
-        rgba(231, 231, 231, 0) 36%
-    );
 }
 
 @-webkit-keyframes fadeIn {
@@ -333,12 +325,6 @@ a {
     display: flex;
     background-color: var(--blue-selected);
 }
-
-.watch:hover {
-    transition: ease-in 0.5s;
-    background-color: var(--blue);
-    cursor: pointer;
-}
 /* END TOP SECTION*/
 
 /* MID SECTION */
@@ -349,13 +335,13 @@ a {
     background-color: white;
     padding: 40px;
     background: #ffffff;
-    background: linear-gradient(0deg, #e9f3ff 0%, rgba(231, 231, 231, 0) 36%);
 }
 
 .mid .content-area {
     width: 100%;
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .content-area .content-title {
@@ -392,6 +378,10 @@ a {
     justify-content: center; /* Agar gambar berada di tengah */
 }
 
+.card2 {
+    font-family: "Inter", sans-serif;
+}
+
 .bottom-column {
     display: flex;
     flex-direction: column;
@@ -418,12 +408,13 @@ a {
     background-size: cover;
     box-sizing: border-box;
     padding-bottom: 40px;
+    padding-top: 30px;
 }
 
 .title {
     color: #007bff;
     font-size: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .card2-container {
@@ -439,24 +430,32 @@ a {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 150px;
-    text-align: center;
+    text-align: left;
     transition: transform 0.3s;
+    position: relative;
 }
 
 .card2:hover {
     transform: translateY(-10px);
 }
 
+.icon {
+    position: absolute; /* Mengubah icon menjadi absolute positioning */
+    top: -20px; /* Atur jarak dari atas */
+    left: 10px; /* Atur jarak dari kiri */
+}
+
 .icon img {
     width: 50px;
     height: 50px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .card2 h3 {
     color: #333;
     font-size: 14px;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .card2 p {
@@ -464,6 +463,139 @@ a {
     font-size: 10px;
 }
 /* macam-macam end */
+
+/* why start */
+.row2 {
+    display: flex;
+    flex-wrap: wrap; /* Agar kolom tetap rapi saat layar kecil */
+    align-items: center; /* Mengatur konten di tengah secara vertikal */
+    margin: 40px;
+}
+
+.left-column2 {
+    flex: 1;
+    padding-right: 40px; /* Memberikan sedikit jarak antara kolom teks dan gambar */
+}
+
+.right-column2 {
+    margin: 10px;
+    display: flex;
+    justify-content: center; /* Agar gambar berada di tengah */
+}
+
+.bottom-column2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Agar gambar berada di tengah */
+    padding-bottom: 10px;
+}
+
+.card3-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card3 {
+    background-color: #0078eb;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    max-width: 150px;
+
+    text-align: center;
+    transition: transform 0.3s;
+    font-family: "Inter", sans-serif;
+}
+
+.card4 {
+    margin-bottom: 20px;
+}
+
+.card3:hover {
+    transform: translateY(-10px);
+}
+
+.icon2 img {
+    width: 100px;
+    height: 100px;
+}
+
+.card3 h3 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.card3 p {
+    color: #fff;
+    font-size: 9px;
+}
+/* why end */
+
+/* contributor start */
+.kontributor {
+    text-align: center;
+    padding: 30px 5px;
+    background-color: #e9f3ff;
+}
+
+.kontributor h2 {
+    font-size: 2rem;
+    font-family: "Inter", sans-serif;
+    color: #0066ff;
+    margin-bottom: 40px;
+}
+
+.kontributor-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.kontributor-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 120px;
+    flex: 1 1 300px;
+}
+
+.kontributor-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.kontributor-card .kontributor-quote {
+    font-family: "Inter", sans-serif;
+    font-style: italic;
+    font-size: 0.7rem;
+    color: #555555;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.kontributor-card h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    color: #0078eb;
+    font-weight: 700;
+    margin: 0;
+}
+
+.kontributor-card .kontributor-position {
+    font-family: "Inter", sans-serif;
+    font-size: 0.7rem;
+    color: #999999;
+    font-weight: 700;
+}
+/* contributor end */
 
 .card-carousel {
     width: 100%;
@@ -791,6 +923,7 @@ a {
     margin-top: 50px;
 }
 /* END MID SECTION */
+
 /* FOOTER */
 .bottom {
     width: 100%;

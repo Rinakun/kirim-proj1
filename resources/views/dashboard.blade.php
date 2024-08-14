@@ -14,7 +14,8 @@
     <div class="content">
         <div class="header">
             <div class="brand">
-                <h1 class="logo">SIREM</h1>
+                {{-- <h1 class="logo">SIREM</h1> --}}
+                <img src="assets/images/SIREM.png" alt="" style="height: 30px; width: 100px">
 
             </div>
             <div class="main-nav">
@@ -67,44 +68,6 @@
                     </div>
                 </div>
             </div>
-
-
-            <div class="content-area" id="releases">
-                <h2 class="content-title">NEW RELEASES</h2>
-                <div class="card-carousel">
-
-                </div>
-            </div>
-            <div class="search-area" id="search">
-                <div class="search-area-content">
-                    <h2>Can't Find Anything You Like?</h2>
-                    <p>Search for thousands of unique movies from our growing database...</p>
-                    <div class="input-area">
-                        <input type="text" placeholder="Search..." />
-                        <svg fill="currentColor" viewBox="0 0 16 16">
-                            <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <div class="content-area" id="movies">
-                <h2 class="content-title">ACTION</h2>
-                <div class="card-carousel">
-
-                </div>
-            </div>
-            <div class="content-area">
-                <h2 class="content-title">DRAMA</h2>
-                <div class="card-carousel">
-
-                </div>
-            </div>
-            <div class="content-area">
-                <h2 class="content-title">THRILLER</h2>
-                <div class="card-carousel">
-                </div>
-            </div>
         </div>
 
         {{-- content macam-macam --}}
@@ -147,60 +110,107 @@
         {{-- content macam macam end --}}
 
         {{-- content why sirem start --}}
-        <div class="row align-items-center content-area">
-            <div class="left-column">
+        <div class="row2 align-items-center content-area">
+            <div class="left-column2">
                 <h2 class="content-title">Mengapa menggunakan SIREM?</h2>
                 <p class="description-title">SIREM menawarkan berbagai keunggulan yang membuatnya pilihan terbaik untuk
                     mendukung pendidikan anak:</p>
             </div>
-            <div class="card2">
-                <div class="icon">
-                    <img src="assets/images/macam.png" alt="Icon">
+            <div class="card3">
+                <div class="icon2">
+                    <img src="assets/images/rekomendasi.png" alt="Icon">
                 </div>
-                <h3>Disleksia</h3>
-                <p>Disleksia adalah gangguan belajar yang mempengaruhi kemampuan seseorang dalam membaca dan
-                    memahami teks.</p>
+                <h3>Rekomendasi Terpersonalisasi</h3>
+                <p>SIREM memberikan rencana pembelajaran yang disesuaikan dengan kebutuhan unik setiap anak</p>
             </div>
-            <div class="right-column">
-                <div class="card2-container">
-                    <div class="bottom-column">
-
-                        <div class="card2">
-                            <div class="icon">
-                                <img src="assets/images/macam.png" alt="Icon">
+            <div class="right-column2">
+                <div class="card3-container">
+                    <div class="bottom-column2">
+                        <div class="card3 card4">
+                            <div class="icon2">
+                                <img src="assets/images/hasil_cepat.png" alt="Icon">
                             </div>
-                            <h3>Diskalkulia</h3>
-                            <p>Diskalkulia adalah gangguan belajar yang mempengaruhi kemampuan seseorang dalam memahami
-                                dan
-                                bekerja dengan angka.</p>
+                            <h3>Hasil Cepat</h3>
+                            <p>Dapatkan hasil pengujian dalam waktu singkat.</p>
                         </div>
 
-                        <div class="card2">
-                            <div class="icon">
-                                <img src="assets/images/macam.png" alt="Icon">
+                        <div class="card3">
+                            <div class="icon2">
+                                <img src="assets/images/mudah_digunakan.png" alt="Icon">
                             </div>
-                            <h3>Disgrafia</h3>
-                            <p>Disgrafia adalah gangguan belajar yang mempengaruhi kemampuan menulis tangan dan ejaan.
+                            <h3>Mudah Digunakan</h3>
+                            <p>Antarmuka yang user-friendly memungkinkan penggunaan tanpa kesulitan.
                             </p>
                         </div>
-
-                    </div>
-                    <div class="card2">
-                        <div class="icon">
-                            <img src="assets/images/macam.png" alt="Icon">
-                        </div>
-                        <h3>ADHD</h3>
-                        <p>ADHD adalah gangguan yang mempengaruhi perhatian, kontrol impuls, dan tingkat aktivitas
-                            seseorang.</p>
                     </div>
                 </div>
+            </div>
 
+            <div class="card3">
+                <div class="icon2">
+                    <img src="assets/images/terpercaya.png" alt="Icon">
+                </div>
+                <h3>Terpercaya</h3>
+                <p>Algoritma kami dikembangkan oleh para ahli dalam bidang pendidikan dan psikologi anak.</p>
             </div>
         </div>
-
-
-
         {{-- content why sirem end --}}
+
+        {{-- conributor start --}}
+        <section class="kontributor">
+            <h2>Kontributor</h2>
+            <div class="kontributor-container">
+                <div class="kontributor-card">
+                    <img src="https://via.placeholder.com/150" alt="Foto Kontributor">
+                    <p class="kontributor-quote">“We are all like fireworks: We climb, we shine and always go our
+                        separate ways
+                        and become further apart. But even when that time comes, let’s not disappear like a firework and
+                        continue to shine... forever.”</p>
+                    <h3>Rizzone Nadhif K</h3>
+                    <p class="kontributor-position">Posisi</p>
+                </div>
+                <div class="kontributor-card">
+                    <img src="https://via.placeholder.com/150" alt="Foto Kontributor">
+                    <p class="kontributor-quote">“We are all like fireworks: We climb, we shine and always go our
+                        separate ways
+                        and become further apart. But even when that time comes, let’s not disappear like a firework and
+                        continue to shine... forever.”</p>
+                    <h3>Nama</h3>
+                    <p class="kontributor-position">Posisi</p>
+                </div>
+                <div class="kontributor-card">
+                    <img src="https://via.placeholder.com/150" alt="Foto Kontributor">
+                    <p class="kontributor-quote">“We are all like fireworks: We climb, we shine and always go our
+                        separate ways
+                        and become further apart. But even when that time comes, let’s not disappear like a firework and
+                        continue to shine... forever.”</p>
+                    <h3>Nama</h3>
+                    <p class="kontributor-position">Posisi</p>
+                </div>
+                <div class="kontributor-card">
+                    <img src="https://via.placeholder.com/150" alt="Foto Kontributor">
+                    <p class="kontributor-quote">“We are all like fireworks: We climb, we shine and always go our
+                        separate ways
+                        and become further apart. But even when that time comes, let’s not disappear like a firework and
+                        continue to shine... forever.”</p>
+                    <h3>Nama</h3>
+                    <p class="kontributor-position">Posisi</p>
+                </div>
+                <div class="kontributor-card">
+                    <img src="https://via.placeholder.com/150" alt="Foto Kontributor">
+                    <p class="kontributor-quote">“We are all like fireworks: We climb, we shine and always go our
+                        separate ways
+                        and become further apart. But even when that time comes, let’s not disappear like a firework and
+                        continue to shine... forever.”</p>
+                    <h3>Nama</h3>
+                    <p class="kontributor-position">Posisi</p>
+                </div>
+            </div>
+        </section>
+
+        {{-- contributor end --}}
+
+
         <div class="bottom">
             <div class="btn-row">
                 <h4>Help Center</h4>
