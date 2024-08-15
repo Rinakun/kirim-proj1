@@ -215,7 +215,7 @@ a {
     min-height: 450px;
     display: flex;
     align-items: center;
-    background-image: url(../images/dashboard.png);
+    background-image: url(../images/dashboard.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -545,7 +545,7 @@ a {
     font-size: 2rem;
     font-family: "Inter", sans-serif;
     color: #0066ff;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
 .kontributor-container {
@@ -556,20 +556,32 @@ a {
 }
 
 .kontributor-card {
+    position: relative;
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 50px 20px 20px; /* Tambahkan padding atas untuk memberi ruang bagi gambar */
     text-align: center;
     max-width: 120px;
     flex: 1 1 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kontributor-card:hover {
+    transform: translateY(-10px); /* Mengangkat card ke atas saat di-hover */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2); /* Menguatkan bayangan saat di-hover */
 }
 
 .kontributor-card img {
+    position: absolute;
+    top: -50px; /* Mengangkat gambar ke atas */
+    left: 50%;
+    transform: translateX(-50%);
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin-bottom: 20px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
 }
 
 .kontributor-card .kontributor-quote {
@@ -578,6 +590,7 @@ a {
     font-size: 0.7rem;
     color: #555555;
     margin-bottom: 20px;
+    margin-top: 10px;
     font-weight: 600;
 }
 
@@ -597,450 +610,185 @@ a {
 }
 /* contributor end */
 
-.card-carousel {
-    width: 100%;
-    margin: 25px 0px;
-    display: flex;
-}
-
-.card-carousel:hover svg {
-    color: white;
-    transition: color 0.3s;
-}
-
-.carousel-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
-.carousel-btn svg {
-    width: 40px;
-    height: 40px;
-    color: transparent;
-    transition: color 0.3s;
-}
-
-.carousel-btn svg:hover {
-    color: lightgrey;
-    cursor: pointer;
-}
-
-.card {
-    background-size: cover;
-    transform: scale(1);
-    transition: transform 0.2s;
-    border-radius: 5px;
-}
-
-.card h4 {
-    font-family: "Inter", sans-serif;
-    font-size: 20px;
-    color: white;
-    text-shadow: 1px 1px 3px black;
-}
-
-.card p {
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    text-overflow: ellipsis;
-}
-
-.card h3 {
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    color: white;
-}
-
-.card svg {
-    width: 25px;
-    height: 25px;
-    min-width: 25px;
-}
-
-.card:hover {
-    transform: scale(1.3);
-    transition: transform 0.5s;
-    z-index: 1;
-}
-
-.movie-desc {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: calc(100% - 100px);
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    vertical-align: center;
-    justify-content: center;
-    z-index: 10;
-
-    padding: 50px 0px;
-}
-
-.modal-content {
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(51, 51, 51, 1);
-}
-
-.desc-image {
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.desc-image div {
-    width: 100%;
-    height: 100%;
-    background: rgb(51, 51, 51);
-    background: linear-gradient(
-        0deg,
-        rgba(51, 51, 51, 1) 0%,
-        rgba(255, 255, 255, 0) 36%
-    );
-}
-
-.close-btn {
-    background-color: #333;
-    border-radius: 50px;
-    position: relative;
-    z-index: 11;
-}
-
-.close-btn svg {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    margin-top: 15px;
-    margin-right: 15px;
-    width: 30px;
-    min-width: 30px;
-    height: 30px;
-    min-height: 30px;
-    padding: 8px;
-    border-radius: 50px;
-    background-color: #333;
-    color: white;
-    cursor: pointer;
-}
-
-.close-btn svg:hover {
-    transform: scale(1.15);
-}
-
-.desc-top {
-    display: flex;
-    flex-direction: column;
-    width: calc(100% - 50px);
-    padding: 0px 25px;
-    margin-top: 25px;
-}
-
-.desc-top h1 {
-    font-family: "Inter", sans-serif;
-    font-size: 50px;
-    color: white;
-    border-bottom: 5px solid var(--red);
-}
-
-.desc-top .button-selection {
-    display: flex;
-    width: 100%;
-    margin-top: 15px;
-}
-
-.desc-top .button-selection div {
-    padding: 10px 25px;
-}
-
-.desc-top h3 {
-    font-family: "Inter", sans-serif;
-}
-
-.desc-top svg {
-    width: 25px;
-    height: 25px;
-    margin-left: 15px;
-}
-
-.desc-mid {
-    width: calc(100% - 50px);
-    margin-top: 50px;
-    padding: 0px 25px;
-}
-
-.desc-mid p {
-    font-size: 30px;
-    font-family: "Inter", sans-serif;
-    color: white;
-}
-
-.desc-bottom {
-    display: flex;
-    flex-direction: column;
-    width: calc(100% - 50px);
-    margin-top: 50px;
-    padding: 0px 25px;
-}
-
-.desc-bottom .cast {
-    width: 100%;
-    display: flex;
-}
-
-.cast-card {
-    height: auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.overlay {
-    height: 100%;
-    width: calc(100% - 30px);
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    justify-content: end;
-    padding: 0px 15px;
-    text-overflow: ellipsis;
-    display: none;
-    border-radius: 5px;
-}
-
-.overlay .button-container {
-    width: 100%;
-    display: flex;
-    margin-bottom: 15px;
-    margin-top: 15px;
-}
-
-.overlay .button-container svg {
-    width: 15px;
-    height: 15px;
-    min-width: 15px;
-    padding: 2px;
-}
-
-.card .queue,
-.card .star {
-    margin-left: 8px;
-    padding: 7px;
-    border-radius: 50px;
-    background-color: #333;
-    color: white;
-    border: 2px solid #878585;
-}
-
-.card .watch {
-    padding: 7px;
-    border-radius: 50px;
-    border: 2px solid var(--red);
-}
-
-.card .queue:hover,
-.card .star:hover {
-    background-color: #616161;
-}
-
-.card:hover .overlay {
-    display: flex;
-    background-image: linear-gradient(
-        to right,
-        rgba(51, 51, 51, 0.95),
-        rgba(255, 255, 255, 0.01)
-    );
-}
-
-.overlay p {
-    color: #bdbdbd;
-}
-
-.mid .search-area {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
-    height: 500px;
-    background-image: url("//external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi0.wp.com%2Fwww.trenovision.com%2Fwp-content%2Fuploads%2F2019%2F10%2F553ada2b9135a3ccdfaaaf31346403dd.png%3Fresize%3D730%252C418%26ssl%3D1&f=1&nofb=1");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.search-area .search-area-content {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(51, 51, 51, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.search-area h2 {
-    font-family: "Inter", sans-serif;
-    color: white;
-    font-size: 55px;
-}
-
-.search-area p {
-    font-family: "Inter", sans-serif;
-    color: white;
-    font-size: 30px;
-}
-
-.search-area input {
-    border: none;
-    background-color: transparent;
-    width: 100%;
-    height: 50px;
-    padding: 4px 25px;
-    font-family: "Inter", sans-serif;
-    font-size: 25px;
-}
-
-.search-area svg {
-    width: 30px;
-    height: 30px;
-    min-width: 30px;
-    padding: 5px 25px;
-    margin-left: auto;
-}
-
-.search-area .input-area {
-    width: 40%;
-    display: flex;
-    align-items: center;
-    background-color: white;
-    border-radius: 50px;
-    margin-top: 50px;
-}
-/* END MID SECTION */
-
 /* FOOTER */
-.bottom {
+.footer-distributed {
+    background: linear-gradient(to bottom, #0078eb, #002d67);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    min-height: 100px;
-    background-color: #141414;
-    justify-content: center;
-    align-items: center;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
 }
 
-.bottom .btn-row {
-    width: 50%;
-    margin: 15px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
 }
 
-.bottom .btn-row h4 {
-    color: white;
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 28%;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-size: 5px;
+    margin: 0;
+}
+
+.footer-distributed h3 span {
+    color: lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
     font-family: "Inter", sans-serif;
     font-size: 12px;
 }
 
-.bottom .btn-row h4:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.bottom .brand {
-    display: flex;
-}
-
-.bottom .brand h1 {
+.footer-distributed .footer-company-name {
+    color: #fff;
+    font-weight: normal;
+    margin: 0;
     font-family: "Inter", sans-serif;
-    font-size: 35px;
+    font-size: 10px;
+    text-align: center;
 }
 
-.bottom .socials {
-    display: flex;
-    justify-content: end;
-    align-items: center;
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 40%;
 }
 
-.socials a svg {
-    width: 25px;
-    height: 25px;
-    max-width: 25px;
-    color: white;
-    padding-left: 20px;
-}
-
-.btn-row p {
-    color: white;
-    font-family: "Inter", sans-serif;
-    font-size: 8px;
-}
-/* END FOOTER */
-
-/* MODAL */
-
-.watch-later-modal {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    z-index: 11;
-    background-color: #333;
-    margin-bottom: 15px;
-    margin-left: 15px;
-    display: flex;
-    padding: 20px;
-    border-radius: 9px;
-    align-items: center;
-    display: none;
-    box-shadow: 3px 3px 8px black;
-}
-
-.watch-later-modal h3 {
-    font-family: "Inter", sans-serif;
+.footer-distributed .footer-center i {
+    background-color: #ffffff;
+    color: #0078eb;
     font-size: 20px;
-    color: white;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
 }
 
-.watch-later-modal .side-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
 }
 
-.watch-later-modal .side-buttons svg {
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 400;
+    vertical-align: middle;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+}
+
+.footer-distributed .footer-center p a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+    content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 16px;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
     width: 35px;
-    min-width: 35px;
     height: 35px;
-    min-height: 35px;
-    color: white;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 6px;
-    border-radius: 50px;
-    margin-left: 20px;
-}
-
-.side-buttons svg:hover {
-    background-color: #141414;
-    transition: background-color 0.3s;
     cursor: pointer;
+    background-color: #fff;
+    border-radius: 50%;
+
+    font-size: 20px;
+    color: #0078eb;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
 }
 
-.watch-later-modal h3 .playlist {
-    color: var(--red);
+hr {
+    border: none; /* Menghilangkan border default */
+    height: 0.2px; /* Ketebalan garis */
+    background-color: #fff; /* Warna garis */
+    margin: 20px 0; /* Margin atas dan bawah */
 }
 
-.watch-later-modal h3 .movie {
-    color: var(--red);
-}
-
-/* END MODAL */
+/* END FOOTER */
 
 @media screen and (max-width: 1660px) {
     .top p {
@@ -1224,6 +972,22 @@ a {
     .header {
         min-height: 70px;
         height: auto;
+    }
+    .footer-distributed {
+        font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-center i {
+        margin-left: 0;
     }
 }
 
