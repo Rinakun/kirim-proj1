@@ -66,12 +66,15 @@ a {
 .header-change {
     flex-direction: column;
     justify-content: center;
+    background-color: var(--blue);
+    padding: 9px;
 }
 
 .header-top {
     display: flex;
     align-items: center;
     width: 100%;
+    background-color: var(--blue);
 }
 
 .header-bottom {
@@ -79,6 +82,7 @@ a {
     align-items: center;
     flex-direction: column;
     width: 100%;
+    background-color: var(--blue);
 }
 
 .header-bottom .main-nav {
@@ -989,6 +993,78 @@ hr {
     .footer-distributed .footer-center i {
         margin-left: 0;
     }
+
+    .row2 {
+        flex-direction: column; /* Atur kolom menjadi baris vertikal */
+        margin: 20px;
+    }
+
+    .left-column2,
+    .right-column2,
+    .bottom-column2 {
+        padding: 10px;
+        max-width: 100%; /* Agar konten mengambil seluruh lebar layar */
+    }
+
+    .card3 {
+        margin: 10px auto; /* Jarak antara kartu */
+        padding: 20px;
+        width: 100%; /* Agar kartu mengambil seluruh lebar layar */
+        box-sizing: border-box;
+        height: auto; /* Tinggi kartu menyesuaikan konten */
+    }
+
+    .card3 h3 {
+        font-size: 14px; /* Sesuaikan ukuran teks judul */
+        margin-bottom: 10px;
+    }
+
+    .card3 p {
+        font-size: 12px; /* Sesuaikan ukuran teks deskripsi */
+    }
+
+    .icon2 img {
+        width: 80px; /* Sesuaikan ukuran icon di layar kecil */
+        height: 80px;
+        margin-bottom: 15px;
+    }
+
+    .kontributor-container {
+        display: flex;
+        flex-direction: column; /* Tetap gunakan kolom vertikal */
+        align-items: center; /* Menyelaraskan semua kartu ke tengah */
+        gap: 20px; /* Menambah jarak antara kartu */
+    }
+
+    .kontributor-card {
+        max-width: 60%; /* Agar kartu lebih kecil pada layar mobile */
+        padding-top: 40px; /* Sesuaikan padding atas untuk ruang gambar */
+        margin-bottom: 40px; /* Tambahkan jarak antara kartu */
+        max-height: 200px;
+    }
+
+    .kontributor-card img {
+        position: absolute;
+        top: -20px; /* Posisi gambar di atas kartu */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 0; /* Hilangkan margin bawah dari gambar */
+    }
+
+    .kontributor-card .kontributor-quote {
+        margin-top: 60px; /* Sesuaikan margin atas untuk mendekatkan teks ke gambar */
+        font-size: 0.8rem; /* Optional: Sesuaikan ukuran teks untuk mobile */
+    }
+
+    .kontributor h2 {
+        font-size: 2rem;
+        font-family: "Inter", sans-serif;
+        color: #0066ff;
+        margin-bottom: 30px;
+    }
 }
 
 @media screen and (max-width: 737px) {
@@ -1161,5 +1237,37 @@ hr {
 
     .socials svg {
         padding: 0px 10px;
+    }
+
+    .content-area .content-title {
+        font-family: "Inter", sans-serif;
+        color: var(--blue-selected);
+        font-weight: 700;
+        font-size: 25px;
+        padding-left: 30px;
+    }
+
+    .content-area .description-title {
+        margin-top: 10px;
+        font-family: "Inter", sans-serif;
+        color: black;
+        font-weight: 500;
+        font-size: 8px;
+        padding-left: 30px;
+    }
+
+    .kontributor-card {
+        max-width: 60%; /* Agar kartu lebih kecil pada layar mobile */
+        padding-top: 40px; /* Sesuaikan padding atas untuk ruang gambar */
+        margin-bottom: 40px; /* Tambahkan jarak antara kartu */
+        max-height: 250px;
+    }
+
+    .footer-distributed .footer-center p span {
+        display: block;
+        font-weight: normal;
+        line-height: 2;
+        font-family: "Inter", sans-serif;
+        font-size: 9px;
     }
 }

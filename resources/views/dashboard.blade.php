@@ -234,7 +234,8 @@
 
             <div>
                 <i class="fa-solid fa-location-dot"></i>
-                <p><span>Jln. Pendidikan No.15, Cibiru Wetan, </span> Kec. Cileunyi, Kabupaten Bandung, <span>Jawa Barat
+                <p><span>Jln. Pendidikan No.15, Cibiru Wetan, </span> <span>Kec. Cileunyi, Kabupaten Bandung,</span>
+                    <span>Jawa Barat
                         40625</span>
                 </p>
             </div>
