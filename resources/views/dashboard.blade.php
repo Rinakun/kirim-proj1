@@ -35,8 +35,8 @@
                 </a>
             </div>
             <div class="right-nav">
-                <div class="button-container login">
-                    <h2>Daftar sekarang</h2>
+                <div class="button-container login" h>
+                    <h2><a href="/login">Daftar sekarang</a></h2>
                 </div>
             </div>
         </div>
