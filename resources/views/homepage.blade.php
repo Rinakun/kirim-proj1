@@ -47,7 +47,7 @@
                     <p>Identifikasi Dini Gangguan Belajar untuk Rencana Pembelajaran yang Lebih Baik</p>
                     <div class="button-section">
                         <div class="watch">
-                            <h3>Identifikasi sekarang</h3>
+                            <h3 href="/login">Identifikasi sekarang</h3>
                         </div>
                     </div>
                 </div>
