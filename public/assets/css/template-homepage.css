@@ -339,10 +339,13 @@ a {
     background-color: var(--blue-selected);
     cursor: pointer;
 }
+.watch a {
+    color: #fff;
+}
 .watch:hover {
     color: white;
     display: flex;
-    background-color: var(--blue);
+    background-color: #319df7;
     transition: ease-in 0.3ms;
 }
 /* END TOP SECTION*/
@@ -958,6 +961,11 @@ hr {
 
     .mid .search-area {
         height: 350px;
+    }
+
+    .container2 {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 

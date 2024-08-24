@@ -12,7 +12,7 @@
 
 <body onload="AddCarouselButtons(); CheckSizeAttributes(); AddCards(); MakeJumbotron(); CheckCards(); ResizeHeader();"
     onscroll="ScrollFunction();" onresize="CheckSizeAttributes(); CheckCards(); MakeJumbotron(); ResizeHeader();"
-    id="/">
+    id="home">
     <div class="content">
         <div class="header">
             <div class="brand">
@@ -24,13 +24,13 @@
                 {{-- <a href="/" class="button-container">
                     <h2>HOME</h2>
                 </a> --}}
-                <a onclick="SmoothScroll('tes-siswa');" class="button-container">
+                <a href="/tes-siswa" class="button-container">
                     <h2>Tes Siswa</h2>
                 </a>
-                <a onclick="SmoothScroll('dashboard');" class="button-container">
+                <a href="/dashboard" class="button-container">
                     <h2>Dashboard</h2>
                 </a>
-                <a onclick="SmoothScroll('');" class="button-container">
+                <a href="/tentang" class="button-container">
                     <h2>Tentang kami</h2>
                 </a>
             </div>
@@ -47,13 +47,13 @@
                     <p>Identifikasi Dini Gangguan Belajar untuk Rencana Pembelajaran yang Lebih Baik</p>
                     <div class="button-section">
                         <div class="watch">
-                            <h3 href="/login">Identifikasi sekarang</h3>
+                            <h3><a href="/login">Identifikasi sekarang</a></h3>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="mid">
+        <div class="mid" id="tentang">
             <div class="row align-items-center content-area">
                 <div class="left-column">
                     <h2 class="content-title">Apa itu SIREM?</h2>
@@ -221,11 +221,11 @@
             <h3><img src="assets/images/SIREM.png" alt="logo" style="width: 90px; height: 30px"></h3>
 
             <p class="footer-links">
-                <a href="#" class="link-1">Home</a>
+                <a href="#home" class="link-1">Home</a>
 
-                <a href="#">Tentang</a>
+                <a href="#tentang">Tentang</a>
 
-                <a href="#">kontributor</a>
+                <a href="#kontributor">kontributor</a>
 
             </p>
         </div>
