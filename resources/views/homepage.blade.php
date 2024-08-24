@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="assets/css/template-dashboard.css" />
+    <link rel="stylesheet" href="assets/css/template-homepage.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>SIREM</title>
     <link rel="icon" href="assets/images/SIREM.ico">
@@ -24,13 +24,13 @@
                 {{-- <a href="/" class="button-container">
                     <h2>HOME</h2>
                 </a> --}}
-                <a onclick="SmoothScroll('');" class="button-container">
+                <a onclick="SmoothScroll('tes-siswa');" class="button-container">
                     <h2>Tes Siswa</h2>
                 </a>
-                <a onclick="SmoothScroll('');" class="button-container">
+                <a onclick="SmoothScroll('dashboard');" class="button-container">
                     <h2>Dashboard</h2>
                 </a>
-                <a onclick="SmoothScroll('kontributor');" class="button-container">
+                <a onclick="SmoothScroll('');" class="button-container">
                     <h2>Tentang kami</h2>
                 </a>
             </div>
@@ -278,7 +278,7 @@
     </footer>
     {{-- footer end --}}
 
-    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/homepage.js"></script>
 </body>
 
 </html>

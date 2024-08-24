@@ -1,0 +1,547 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Titan+One&display=swap");
+
+:root {
+    --blue: #0078eb;
+    --blue-selected: #4caeff;
+    --grey: rgba(104, 104, 104, 1);
+    --grey-selected: rgb(162, 159, 159);
+    --red: rgba(212, 44, 44, 1);
+    --red-selected: rgba(170, 35, 35, 0.9);
+    --card-scale: 5;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+h1,
+h3,
+h2,
+h5,
+h4,
+p {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-family: "Titan One", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+}
+
+.white {
+    color: rgba(230, 230, 230, 1);
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    position: fixed;
+    height: 70px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+.aktif {
+    border-bottom-color: var(--blue-selected) !important;
+}
+.header-change {
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--blue);
+    padding: 9px;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--blue);
+}
+
+.header-bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--blue);
+}
+
+.header-bottom .main-nav {
+    flex-direction: column;
+    margin-left: 0px;
+    margin-bottom: 20px;
+}
+
+.header-bottom .main-nav h3 {
+    margin-bottom: 10px;
+}
+
+.header-bottom .right-nav {
+    margin: 0 auto !important;
+}
+
+.header:hover {
+    /* box-shadow: 0px 2px 10px black; */
+    transition: background-color 0.3s;
+}
+
+.header-active {
+    background-color: var(--blue);
+    box-shadow: 0px 2px 10px black;
+    transition: background-color 0.3s;
+}
+
+.header-active:hover {
+    background-color: var(--blue);
+    box-shadow: 0px 2px 10px black;
+    transition: background-color 0.3s;
+}
+
+.header .brand {
+    margin-left: 25px;
+    display: flex;
+}
+
+.header .brand h1 {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+
+.main-nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.main-nav .button-container {
+    height: calc(100% - 10px);
+    margin-top: 5px;
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid transparent;
+    transition: border-bottom-color 0.3s;
+}
+
+.main-nav .button-container:hover {
+    cursor: pointer;
+    border-bottom-color: var(--blue-selected);
+    transition: border-bottom-color 0.3s;
+}
+
+/* navbar teks */
+.main-nav .button-container h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+
+.header .right-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.right-nav .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 25px;
+    border-radius: 32px;
+}
+
+.login {
+    border: 0.5px solid var(--blue);
+    cursor: pointer;
+    background-color: var(--blue);
+    color: var(--blue);
+}
+.login a {
+    color: #fff;
+}
+
+.login:hover {
+    background-color: var(--blue-selected);
+    border: 0.5px solid var(--blue-selected);
+    cursor: pointer;
+    transition: ease-in 0.2s;
+}
+
+.right-nav .button-container h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: var(--blue);
+}
+
+.hamburger {
+    margin-left: auto;
+    margin-right: 25px;
+    display: none;
+}
+
+.fa-bars {
+    background-color: var(--blue);
+    padding: 10px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+/* END HEADER */
+
+/* TOP SECTION */
+.top {
+    width: 100%;
+    min-height: 351px;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.top .image-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-image: url(../images/tes_siswa.svg);
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.top .left-side {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.top h1 {
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: white;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.top p {
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    padding: 25px 0px;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.top h3 {
+    display: flex;
+    align-items: center;
+}
+/* END TOP SECTION*/
+
+/* IDENTITY START */
+.identity {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+}
+
+.identity h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #007bff;
+}
+
+.identity p {
+    margin-top: 5px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: black;
+}
+
+.identity-option form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.form-group p,
+.identity-option p {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: black;
+}
+
+.identity-option p {
+    margin-top: 30px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e9f3ff;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    border-left-color: 1px solid #0078eb;
+}
+
+input[type="text"]::placeholder {
+    color: #6c757d;
+    font-family: "Inter", sans-serif;
+}
+option {
+    border-radius: 8px;
+}
+.nomor {
+    margin-right: 20px;
+}
+/* IDENTITY END */
+
+/* MIDDLE START */
+.middle {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.middle .text-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #0078eb;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.middle .center-side {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.middle h1 {
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+    padding-top: 30px;
+    text-align: left;
+    margin-left: 100px;
+}
+
+.middle p {
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    padding: 15px 0px;
+    text-align: left;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.middle h3 {
+    display: flex;
+    align-items: center;
+}
+/* MIDDLE END */
+
+/* QUESTION START */
+/* Style the progress text to be blue */
+.blue-text {
+    color: #007bff;
+}
+
+/* Adjust progress bar */
+.progress {
+    height: 10px; /* Increase thickness */
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-container {
+    background-color: #e9f3ff;
+    padding: 50px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #007bff; /* Customize color */
+    transition: width 0.3s;
+}
+
+/* Adjust the percentage text position */
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align percentage with bar */
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+/* Other existing styles */
+.survey-container {
+    font-family: "Inter", sans-serif;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    font-size: 14px;
+}
+
+.question {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 20px;
+}
+
+.question-text {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #eee;
+    padding: 20px;
+    margin-top: 60px;
+    margin-left: 20px;
+    border-radius: 8px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    flex-direction: column;
+}
+
+.options input[type="radio"] {
+    margin: 10px;
+}
+
+.nav-buttons {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.nav-buttons button {
+    padding: 10px 20px;
+    background-color: #0078eb;
+    color: #fff;
+    border: none;
+    border-radius: 32px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* QUESTION END */
+
+/* responsive */
+/* Tampilkan menu hamburger di layar mobile */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .main-nav {
+        display: none; /* Sembunyikan menu utama di mobile */
+        position: absolute;
+        top: 70px; /* Di bawah header */
+        left: 0;
+        width: 100%;
+        background-color: var(--blue);
+        flex-direction: column;
+        padding: 10px 0;
+        z-index: 1000;
+        margin-left: 0px;
+        height: auto;
+    }
+
+    .main-nav .button-container h2 {
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: white;
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .header .right-nav {
+        display: none; /* Sembunyikan right-nav pada mobile */
+    }
+
+    .options label {
+        width: 100%;
+    }
+    .options {
+        flex-wrap: wrap;
+    }
+}

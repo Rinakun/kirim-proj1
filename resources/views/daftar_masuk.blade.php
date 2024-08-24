@@ -37,7 +37,7 @@
                     </div> --}}
 
                     <div class="field button-field">
-                        <button>Masuk</button>
+                        <button><a href="/dashboard">Masuk</a></button>
                     </div>
                 </form>
                 <div class="line"></div>
@@ -52,9 +52,6 @@
                     <span>Belum punya akun? <a href="#" class="link signup-link">Daftar</a></span>
                 </div>
             </div>
-
-
-
         </div>
 
         <!-- Signup Form -->

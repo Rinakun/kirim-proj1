@@ -1,1289 +1,409 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Titan+One&display=swap");
-
-:root {
-    --blue: #00459c;
-    --blue-selected: #4caeff;
-    --grey: rgba(104, 104, 104, 1);
-    --grey-selected: rgb(162, 159, 159);
-    --red: rgba(212, 44, 44, 1);
-    --red-selected: rgba(170, 35, 35, 0.9);
-    --card-scale: 5;
-}
-
-html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-h1,
-h3,
-h2,
-h5,
-h4,
-p {
-    margin: 0px;
-}
-
-a {
-    text-decoration: none;
-}
-
-.content {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-}
-
-.logo {
-    font-family: "Titan One", sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    color: white;
-}
-
-.white {
-    color: rgba(230, 230, 230, 1);
-}
-
-/* HEADER */
-.header {
-    width: 100%;
-    position: fixed;
-    height: 70px;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    z-index: 10;
-    transition: background-color 0.3s;
-}
-
-.header-change {
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--blue);
-    padding: 9px;
-}
-
-.header-top {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    background-color: var(--blue);
-}
-
-.header-bottom {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--blue);
-}
-
-.header-bottom .main-nav {
-    flex-direction: column;
-    margin-left: 0px;
-    margin-bottom: 20px;
-}
-
-.header-bottom .main-nav h3 {
-    margin-bottom: 10px;
-}
-
-.header-bottom .right-nav {
-    margin: 0 auto !important;
-}
-
-.header:hover {
-    background-color: transparent;
-    /* box-shadow: 0px 2px 10px black; */
-    transition: background-color 0.3s;
-}
-
-.header-active {
-    background-color: var(--blue);
-    box-shadow: 0px 2px 10px black;
-    transition: background-color 0.3s;
-}
-
-.header-active:hover {
-    background-color: var(--blue);
-    box-shadow: 0px 2px 10px black;
-    transition: background-color 0.3s;
-}
-
-.header .brand {
-    margin-left: 25px;
-    display: flex;
-}
-
-.header .brand h1 {
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-}
-
-.main-nav {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin-left: 50px;
-}
-
-.main-nav .button-container {
-    height: calc(100% - 10px);
-    margin-top: 5px;
-    padding: 0px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 5px solid transparent;
-    transition: border-bottom-color 0.3s;
-}
-
-.main-nav .button-container:hover {
-    cursor: pointer;
-    border-bottom-color: var(--blue-selected);
-    transition: border-bottom-color 0.3s;
-}
-
-/* navbar teks */
-.main-nav .button-container h2 {
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    color: white;
-}
-
-.header .right-nav {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    margin-right: 25px;
-}
-
-.right-nav .button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 25px;
-    border-radius: 32px;
-}
-
-.login {
-    border: 0.5px solid white;
-    cursor: pointer;
-    color: #fff;
-}
-.login a {
-    color: #fff;
-}
-
-.login:hover {
-    background-color: var(--blue-selected);
-    border: 0.5px solid var(--blue-selected);
-    cursor: pointer;
-    transition: ease-in 0.2s;
-}
-
-.right-nav .button-container h2 {
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    color: white;
-}
-
-.hamburger {
-    margin-left: auto;
-    margin-right: 25px;
-}
-
-.hamburger:hover svg {
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.hamburger svg {
-    width: 30px;
-    height: 30px;
-    min-width: 30px;
-    padding: 8px;
-    border-radius: 12px;
-    background-color: white;
-    color: black;
-}
-/* END HEADER */
-
-/* TOP SECTION */
-.top {
-    width: 100%;
-    min-height: 650px;
-    display: flex;
-    align-items: center;
-    background-image: url(../images/dashboard.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.top .image-container {
-    padding-top: 60px;
-    display: flex;
-    align-items: center;
-    padding-bottom: 90px;
-    width: 100%;
-    height: 100%;
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-.fadeIn {
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
-}
-
-.fadeOut {
-    -webkit-animation-name: fadeOut;
-    animation-name: fadeOut;
-}
-
-.top .left-side {
-    width: 40%;
-    height: 80%;
-    padding-left: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.top h1 {
-    margin: 0px;
-    font-family: "Inter", sans-serif;
-    font-weight: 700;
-    font-size: 48px;
-    color: white;
-    padding-top: 80px;
-}
-
-.top p {
-    margin: 0px;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    color: white;
-    padding: 25px 0px;
-}
-
-.top h3 {
-    display: flex;
-    align-items: center;
-}
-
-.button-section {
-    width: 100%;
-    display: flex;
+/* CHART START */
+* {
     font-family: "Inter", sans-serif;
 }
 
-.button-section svg {
-    width: 25px;
-    height: 25px;
-    min-width: 25px;
-    padding-left: 10px;
-}
-
-.top .watch {
-    padding: 10px 25px;
-    border-radius: 32px;
-}
-
-.watch {
-    color: white;
-    display: flex;
-    background-color: var(--blue-selected);
-    cursor: pointer;
-}
-.watch:hover {
-    color: white;
-    display: flex;
-    background-color: var(--blue);
-    transition: ease-in 0.3ms;
-}
-/* END TOP SECTION*/
-
-/* MID SECTION */
-/* tengah mulai */
-.mid {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    padding: 40px;
-    background: #ffffff;
-}
-
-.mid .content-area {
-    width: 100%;
-    display: flex;
-    margin-bottom: 20px;
+.dashboard-container {
+    align-self: center;
     margin-top: 20px;
-}
-
-.content-area .content-title {
-    font-family: "Inter", sans-serif;
-    color: var(--blue-selected);
-    font-weight: 700;
-    font-size: 35px;
-    padding-left: 30px;
-}
-
-.content-area .description-title {
-    margin-top: 10px;
-    font-family: "Inter", sans-serif;
-    color: black;
-    font-weight: 500;
-    font-size: 14px;
-    padding-left: 30px;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap; /* Agar kolom tetap rapi saat layar kecil */
-    align-items: center; /* Mengatur konten di tengah secara vertikal */
-}
-
-.left-column {
-    flex: 1;
-    padding-right: 40px; /* Memberikan sedikit jarak antara kolom teks dan gambar */
-}
-
-.right-column {
-    flex: 1;
-    display: flex;
-    justify-content: center; /* Agar gambar berada di tengah */
-}
-
-.card2 {
-    font-family: "Inter", sans-serif;
-}
-
-.bottom-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Agar gambar berada di tengah */
-}
-
-.right-image img {
-    max-width: 85%;
-    height: auto;
-    text-align: right;
-    position: relative;
-}
-
-/* tengah end */
-
-/* macam-macam start */
-.container2 {
-    font-family: "Inter", sans-serif;
     text-align: center;
     background-color: #e9f3ff;
-    width: 100%;
-    min-height: 250px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-sizing: border-box;
-    padding-bottom: 40px;
-    padding-top: 30px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
-.title {
-    color: #007bff;
-    font-size: 26px;
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-
-.card2-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.card2 {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 200px;
-    text-align: left;
-    transition: transform 0.3s;
-    position: relative;
-}
-
-.card2:hover {
-    transform: translateY(-10px);
-}
-
-.icon {
-    position: absolute; /* Mengubah icon menjadi absolute positioning */
-    top: -20px; /* Atur jarak dari atas */
-    left: 10px; /* Atur jarak dari kiri */
-}
-
-.icon img {
-    width: 60px;
-    height: 60px;
+.dashboard-container h1 {
+    color: #0078eb;
     margin-bottom: 20px;
+    text-align: left;
 }
 
-.card2 h3 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 10px;
-    margin-top: 20px;
-}
-
-.card2 p {
-    color: rgb(51, 51, 51, 0.8);
-    font-size: 14px;
-}
-/* macam-macam end */
-
-/* why start */
-.row2 {
+.cards-container {
     display: flex;
-    flex-wrap: wrap; /* Agar kolom tetap rapi saat layar kecil */
-    align-items: center; /* Mengatur konten di tengah secara vertikal */
-    margin: 40px;
-}
-
-.left-column2 {
-    flex: 1;
-    padding-right: 60px; /* Memberikan sedikit jarak antara kolom teks dan gambar */
-}
-
-.right-column2 {
-    margin: 20px;
-    display: flex;
-    justify-content: center; /* Agar gambar berada di tengah */
-}
-
-.bottom-column2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Agar gambar berada di tengah */
-    padding-bottom: 10px;
-}
-
-.card3-container {
-    display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-.card3 {
+.card {
     background-color: #0078eb;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    max-width: 150px;
-
+    padding: 20px;
+    box-sizing: border-box;
     text-align: center;
-    transition: transform 0.3s;
+    /* width: 350px; */
+    width: calc(100% / 3);
+    height: fit-content;
+    flex: 1 1 25%;
+}
+
+.card h2 {
+    color: #fff;
+    margin-bottom: 7px;
+    font-size: 18px;
+    text-align: justify;
+    font-weight: 400;
+}
+
+.card h3 {
+    color: #fff;
+    margin-bottom: 7px;
+    font-size: 24px;
+    text-align: left;
+}
+
+.card canvas {
+    height: auto;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.count {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-align: justify;
+    font-weight: 700;
+}
+
+.spider-chart {
+    height: 340px !important;
+    width: fit-content !important;
+    display: block;
+    box-sizing: border-box;
+}
+
+.gender-chart {
+    height: 273px !important;
+    width: 100% !important;
+    padding: 10px;
+}
+
+.chart-text {
+    position: absolute;
+    top: 56%;
+    right: 22%;
+    transform: translate(-50%, -50%);
+    font-size: 24px !important;
+    color: #000 !important;
+    z-index: 1;
+    pointer-events: none; /* Ensure the text doesn't interfere with the chart's hover functionality */
     font-family: "Inter", sans-serif;
 }
 
-.card4 {
-    margin-bottom: 20px;
+/* CHART END */
+
+/* TABLE DATA START */
+.table-container {
+    margin: 20px;
+    font-family: "Inter", sans-serif;
+    padding: 40px;
 }
 
-.card3:hover {
-    transform: translateY(-10px);
-}
-
-.icon2 img {
-    width: 100px;
-    height: 100px;
-}
-
-.card3 h3 {
-    color: #fff;
-    font-weight: 700;
-    font-size: 18px;
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
 }
 
-.card3 p {
-    color: #fff;
-    font-size: 12px;
+.search-bar {
+    display: flex;
+    align-items: center;
 }
-/* why end */
 
-/* contributor start */
-.kontributor {
-    text-align: center;
-    padding: 30px 20px;
+.search-bar input {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.table-actions button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.students-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.students-table th,
+.students-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.students-table th i {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.students-table th input {
+    cursor: pointer;
+}
+
+.students-table td button.detail-button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 32px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.students-table td button.detail-button:hover {
+    background-color: #0056b3;
+}
+
+/* TABLE DATA END */
+
+/* DETAIL SISWA START */
+.analysis-container {
     background-color: #e9f3ff;
+    padding: 80px;
 }
 
-.kontributor h2 {
-    font-size: 2rem;
+.analysis-title {
+    margin-top: 50px;
+    text-align: center;
+    color: #0078eb;
     font-family: "Inter", sans-serif;
-    color: #0066ff;
-    margin-bottom: 80px;
 }
 
-.kontributor-container {
+.student-info {
+    margin-top: 50px;
+    background-color: #005acd;
+    padding: 20px;
+    border-radius: 24px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.student-info p {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.analysis-result {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.analysis-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.chart-container canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.circle-chart {
+    width: 210px;
+    height: 210px;
+    background: conic-gradient(#4caeff 0 0%, #cd0000 72% 100%);
+    border-radius: 50%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.kontributor-card {
+    align-items: center;
     position: relative;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-    padding: 50px 20px 20px; /* Tambahkan padding atas untuk memberi ruang bagi gambar */
-    text-align: center;
-    max-width: 180px;
-    flex: 1 1 300px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.kontributor-card:hover {
-    transform: translateY(-10px); /* Mengangkat card ke atas saat di-hover */
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2); /* Menguatkan bayangan saat di-hover */
-}
-
-.kontributor-card img {
-    position: absolute;
-    top: -50px; /* Mengangkat gambar ke atas */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 100px;
+.circle-chart .circle {
+    width: 180px;
+    height: 180px;
+    background-color: white;
     border-radius: 50%;
-    margin-bottom: 20px;
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.kontributor-card .kontributor-quote {
-    font-family: "Inter", sans-serif;
-    font-style: italic;
-    font-size: 0.8rem;
-    color: #555555;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    font-weight: 600;
-}
-
-.kontributor-card h3 {
-    font-family: "Inter", sans-serif;
-    font-size: 0.9rem;
-    color: #0078eb;
-    font-weight: 700;
-    margin: 0;
-}
-
-.kontributor-card .kontributor-position {
-    font-family: "Inter", sans-serif;
-    font-size: 0.7rem;
-    color: #999999;
-    font-weight: 700;
-}
-/* contributor end */
-
-/* FOOTER */
-.footer-distributed {
-    background: linear-gradient(to bottom, #0078eb, #002d67);
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-    box-sizing: border-box;
-    width: 100%;
-    text-align: left;
-    font-family: "Inter", sans-serif;
-    padding: 55px 50px;
-}
-
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right {
-    display: inline-block;
-    vertical-align: top;
-}
-
-/* Footer left */
-
-.footer-distributed .footer-left {
-    width: 28%;
-}
-
-/* The company logo */
-
-.footer-distributed h3 {
-    color: #ffffff;
-    font-family: "Inter", sans-serif;
-    font-size: 5px;
-    margin: 0;
-}
-
-.footer-distributed h3 span {
-    color: lightseagreen;
-}
-
-/* Footer links */
-
-.footer-distributed .footer-links {
-    color: #ffffff;
-    margin: 20px 0 12px;
-    padding: 0;
-}
-
-.footer-distributed .footer-links a {
-    display: inline-block;
-    line-height: 1.8;
-    font-weight: 400;
-    text-decoration: none;
-    color: inherit;
-    font-family: "Inter", sans-serif;
-    font-size: 18px;
-}
-
-.footer-distributed .footer-company-name {
-    color: #fff;
-    font-weight: normal;
-    margin: 0;
-    font-family: "Inter", sans-serif;
-    font-size: 15px;
-    text-align: center;
-}
-
-/* Footer Center */
-
-.footer-distributed .footer-center {
-    width: 40%;
-}
-
-.footer-distributed .footer-center i {
-    background-color: #ffffff;
-    color: #0078eb;
-    font-size: 20px;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 42px;
-    margin: 10px 15px;
-    vertical-align: middle;
-}
-
-.footer-distributed .footer-center i.fa-envelope {
-    font-size: 17px;
-    line-height: 38px;
-}
-
-.footer-distributed .footer-center p {
-    display: inline-block;
-    color: #ffffff;
-    font-weight: 400;
-    vertical-align: middle;
-    margin: 0;
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-}
-
-.footer-distributed .footer-center p span {
-    display: block;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 2;
-    font-family: "Inter", sans-serif;
-}
-
-.footer-distributed .footer-center p a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
-
-.footer-distributed .footer-links a:before {
-    content: "|";
-    font-weight: 300;
-    font-size: 20px;
-    left: 0;
-    color: #fff;
-    display: inline-block;
-    padding-right: 5px;
-}
-
-.footer-distributed .footer-links .link-1:before {
-    content: none;
-}
-
-/* Footer Right */
-
-.footer-distributed .footer-right {
-    width: 30%;
-}
-
-.footer-distributed .footer-company-about {
-    line-height: 16px;
-    color: #ffffff;
-    font-family: "Inter", sans-serif;
-    font-size: 12px;
-    font-weight: normal;
-    margin: 0;
-}
-
-.footer-distributed .footer-company-about span {
-    display: block;
-    color: #ffffff;
-    font-size: 18px;
+.circle-chart .percent span {
+    font-size: 50px;
     font-weight: bold;
-    font-family: "Inter", sans-serif;
+}
+
+.circle-chart .percent p {
+    font-size: 16px;
+    margin-top: 5px;
+    color: #333;
+}
+
+.detail-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-right: 50px;
+    padding-bottom: 40px;
+}
+
+.disorder-label {
+    background-color: #e0e7ff;
+    color: #007bff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
     margin-bottom: 20px;
 }
 
-.footer-distributed .footer-icons {
-    margin-top: 25px;
-}
-
-.footer-distributed .footer-icons a {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
+.btn-primary {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 32px;
     cursor: pointer;
-    background-color: #fff;
-    border-radius: 50%;
-
-    font-size: 20px;
-    color: #0078eb;
-    text-align: center;
-    line-height: 35px;
-
-    margin-right: 3px;
-    margin-bottom: 5px;
+    width: fit-content;
 }
 
-hr {
-    border: none; /* Menghilangkan border default */
-    height: 0.2px; /* Ketebalan garis */
-    background-color: #fff; /* Warna garis */
-    margin: 20px 0; /* Margin atas dan bawah */
+.btn-primary:hover {
+    background-color: #0056b3;
 }
 
-/* END FOOTER */
-
-@media screen and (max-width: 1660px) {
-    .top p {
-        font-size: 16px;
-    }
+.other-disorders {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-@media screen and (max-width: 1430px) {
-    .card h4 {
-        font-size: 16px;
-    }
-
-    .card p {
-        font-size: 11px;
-    }
-
-    .overlay {
-        width: calc(100% - 20px);
-        padding: 0px 10px;
-    }
-
-    .overlay .button-container {
-        margin-bottom: 10px;
-        margin-top: 10px;
-    }
-
-    .modal-content {
-        max-width: 800px;
-    }
+.disorder-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: calc(100% / 5);
 }
 
-@media screen and (max-width: 1330px) {
-    .top h1 {
-        font-size: 48px;
-    }
-
-    .top p {
-        font-size: 14px;
-    }
-
-    .top h3 {
-        font-size: 12px;
-    }
-
-    .top svg {
-        width: 20px;
-        height: 20px;
-        min-width: 20px;
-    }
-
-    .top .watch,
-    .top .queue {
-        padding: 7px 20px;
-    }
+.disorder-card h4 {
+    background-color: #cce8ff;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 32px;
+    color: #005acd;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 
-@media screen and (max-width: 1230px) {
-    .main-nav .button-container h2 {
-        font-size: 20px;
-    }
-
-    .right-nav .button-container h2 {
-        font-size: 16px;
-    }
-
-    .carousel-btn svg {
-        width: 30px;
-        height: 30px;
-    }
-
-    .card svg {
-        width: 20px;
-        height: 20px;
-        min-width: 20px;
-    }
-
-    .content-area .content-title {
-        padding-left: 30px;
-    }
-
-    .search-area-content h2 {
-        font-size: 40px;
-    }
-
-    .search-area-content p {
-        font-size: 20px;
-    }
+.disorder-card p {
+    color: #000;
 }
 
-@media screen and (max-width: 1180px) {
-    .top .left-side {
-        padding-left: 6%;
-        width: 45%;
-    }
-
-    .search-area-content .input-area {
-        width: 50%;
-        margin-top: 40px;
-    }
-
-    .mid .search-area {
-        height: 400px;
-    }
-
-    .search-area input {
-        font-size: 18px;
-    }
-
-    .search-area svg {
-        width: 20px;
-        height: 20px;
-        min-width: 20px;
-    }
-
-    .modal-content {
-        max-width: 700px;
-    }
+.persen {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 2px;
 }
 
-@media screen and (max-width: 1045px) {
-    .top h1 {
-        font-size: 38px;
-    }
-
-    .top p {
-        font-size: 12px;
-    }
-
-    .content-area .content-title {
-        font-size: 28px;
-    }
-
-    .mid {
-        padding: 30px;
-    }
-
-    .search-area-content .input-area input {
-        height: 40px;
-    }
-
-    .search-area-content h2 {
-        font-size: 30px;
-    }
-    .search-area-content p {
-        font-size: 16px;
-    }
-
-    .mid .search-area {
-        height: 350px;
-    }
+.progress-bar {
+    width: 10%;
+    height: 10px;
+    border-radius: 10px;
 }
 
-@media screen and (max-width: 950px) {
-    .header .brand h1 {
-        font-size: 30px;
-    }
-
-    .main-nav .button-container h2 {
-        font-size: 12px;
-    }
-
-    .right-nav .button-container h2 {
-        font-size: 12px;
-    }
-
-    .main-nav {
-        margin-left: 30px;
-    }
-
-    .movie-desc {
-        padding: 0px;
-        height: 100%;
-    }
-
-    .modal-content {
-        max-width: 100%;
-    }
+.barChartCanvas {
+    height: 50px; /* Atur sesuai kebutuhan */
+    max-height: 10px; /* Untuk memastikan tidak terlalu tinggi */
+    width: 100%; /* Sesuaikan lebar agar penuh */
 }
 
-@media screen and (max-width: 815px) {
-    .header {
-        min-height: 70px;
-        height: auto;
-    }
-    .footer-distributed {
-        font: bold 14px sans-serif;
-    }
-
-    .footer-distributed .footer-left,
-    .footer-distributed .footer-center,
-    .footer-distributed .footer-right {
-        display: block;
-        width: 100%;
-        margin-bottom: 40px;
-        text-align: center;
-    }
-
-    .footer-distributed .footer-center i {
-        margin-left: 0;
-    }
-
-    .row2 {
-        flex-direction: column; /* Atur kolom menjadi baris vertikal */
-        margin: 20px;
-    }
-
-    .left-column2,
-    .right-column2,
-    .bottom-column2 {
-        padding: 10px;
-        max-width: 100%; /* Agar konten mengambil seluruh lebar layar */
-    }
-
-    .card3 {
-        margin: 10px auto; /* Jarak antara kartu */
-        padding: 20px;
-        width: 100%; /* Agar kartu mengambil seluruh lebar layar */
-        box-sizing: border-box;
-        height: auto; /* Tinggi kartu menyesuaikan konten */
-    }
-
-    .card3 h3 {
-        font-size: 14px; /* Sesuaikan ukuran teks judul */
-        margin-bottom: 10px;
-    }
-
-    .card3 p {
-        font-size: 12px; /* Sesuaikan ukuran teks deskripsi */
-    }
-
-    .icon2 img {
-        width: 80px; /* Sesuaikan ukuran icon di layar kecil */
-        height: 80px;
-        margin-bottom: 15px;
-    }
-
-    .kontributor-container {
-        display: flex;
-        flex-direction: column; /* Tetap gunakan kolom vertikal */
-        align-items: center; /* Menyelaraskan semua kartu ke tengah */
-        gap: 20px; /* Menambah jarak antara kartu */
-    }
-
-    .kontributor-card {
-        max-width: 60%; /* Agar kartu lebih kecil pada layar mobile */
-        padding-top: 40px; /* Sesuaikan padding atas untuk ruang gambar */
-        margin-bottom: 40px; /* Tambahkan jarak antara kartu */
-        max-height: 200px;
-    }
-
-    .kontributor-card img {
-        position: absolute;
-        top: -20px; /* Posisi gambar di atas kartu */
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin-bottom: 0; /* Hilangkan margin bawah dari gambar */
-    }
-
-    .kontributor-card .kontributor-quote {
-        margin-top: 60px; /* Sesuaikan margin atas untuk mendekatkan teks ke gambar */
-        font-size: 0.8rem; /* Optional: Sesuaikan ukuran teks untuk mobile */
-    }
-
-    .kontributor h2 {
-        font-size: 2rem;
-        font-family: "Inter", sans-serif;
-        color: #0066ff;
-        margin-bottom: 30px;
-    }
+.piechart {
+    padding: 50px;
 }
 
-@media screen and (max-width: 737px) {
-    .carousel-btn {
-        display: none;
-    }
+/* DETAIL SISWA END */
 
+/* Responsiveness */
+@media (max-width: 1024px) {
     .card {
-        display: flex !important;
-        overflow-y: visible;
+        flex: 1 1 25%;
     }
 
-    .card:hover {
-        position: relative;
-        margin: 0px 30px !important;
+    .gender-chart {
+        height: 178px !important;
+        width: 100% !important;
+        padding: 10px;
     }
 
-    .card-carousel {
-        overflow-x: scroll;
-        overflow-y: visible;
-        align-items: center;
+    .spider-chart {
+        height: 224px !important;
+        width: fit-content;
+        display: block;
+        box-sizing: border-box;
     }
 
-    .card svg {
-        width: 10px;
-        height: 10px;
-        min-width: 10px;
-    }
-
-    .search-area .input-area {
-        width: 70%;
-    }
-
-    .mid .search-area {
-        height: 250px;
-    }
-
-    .content-area .content-title {
-        padding-left: 0px;
-    }
-
-    .bottom .btn-row {
-        width: 95%;
-    }
-
-    .desc-top h3 {
+    .card h3 {
         font-size: 16px;
     }
+}
 
-    .desc-top svg {
-        width: 20px;
-        height: 20px;
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 45%;
     }
-
-    .desc-mid p {
-        font-size: 25px;
+    .analysis-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 }
 
-@media screen and (max-width: 730px) {
-    .carousel-btn svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .card-carousel {
-        margin: 10px 0px;
-    }
-}
-
-@media screen and (max-width: 710px) {
-    .card h4 {
-        font-size: 13px;
-    }
-
-    .card p {
-        font-size: 8px;
-    }
-
-    .overlay {
-        width: calc(100% - 16px);
-        padding: 0px 8px;
-    }
-
-    .overlay .button-container {
-        margin-bottom: 8px;
-        margin-top: 8px;
-    }
-
-    .card .queue {
-        margin-left: 8px;
-    }
-
-    .card .queue,
-    .card .watch,
-    .card .star {
-        padding: 4px;
-    }
-
-    .search-area-content h2 {
-        font-size: 25px;
-    }
-    .search-area-content p {
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 610px) {
-    .card svg {
-        width: 8px;
-        height: 8px;
-        min-width: 8px;
-    }
-
-    .top h1 {
-        font-size: 28px;
-    }
-
-    .top p {
-        font-size: 10px;
-        padding: 15px 0px;
-    }
-
-    .top .left-side {
-        width: 80%;
-    }
-
-    .mid {
-        padding: 20px;
-    }
-}
-
-@media screen and (max-width: 545px) {
-    .card h4 {
-        font-size: 10px;
-    }
-
-    .card p {
-        font-size: 6px;
-    }
-
-    .search-area-content h2 {
-        text-align: center;
-        font-size: 24px;
-    }
-    .search-area-content p {
-        text-align: center;
-        width: 90%;
-        font-size: 12px;
-    }
-
-    .desc-top h3 {
-        font-size: 14px;
-    }
-
-    .desc-top svg {
-        width: 18px;
-        height: 18px;
-    }
-
-    .desc-mid p {
-        font-size: 20px;
-    }
-}
-
-@media screen and (max-width: 460px) {
-    .btn-row {
-        flex-direction: column;
-    }
-
-    .socials svg {
-        padding: 0px 10px;
-    }
-
-    .content-area .content-title {
-        font-family: "Inter", sans-serif;
-        color: var(--blue-selected);
-        font-weight: 700;
-        font-size: 25px;
-        padding-left: 30px;
-    }
-
-    .content-area .description-title {
-        margin-top: 10px;
-        font-family: "Inter", sans-serif;
-        color: black;
-        font-weight: 500;
-        font-size: 8px;
-        padding-left: 30px;
-    }
-
-    .kontributor-card {
-        max-width: 60%; /* Agar kartu lebih kecil pada layar mobile */
-        padding-top: 40px; /* Sesuaikan padding atas untuk ruang gambar */
-        margin-bottom: 40px; /* Tambahkan jarak antara kartu */
-        max-height: 250px;
-    }
-
-    .footer-distributed .footer-center p span {
-        display: block;
-        font-weight: normal;
-        line-height: 2;
-        font-family: "Inter", sans-serif;
-        font-size: 9px;
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%;
     }
 }
