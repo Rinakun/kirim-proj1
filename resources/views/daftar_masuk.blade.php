@@ -43,7 +43,7 @@
                 <div class="line"></div>
 
                 <div class="media-options">
-                    <a href="#" class="field google">
+                    <a href="google.com" class="field google">
                         <img src="assets/images/Google.png" alt="" class="google-img">
                         <span>Masuk dengan Google</span>
                     </a>
