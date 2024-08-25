@@ -545,3 +545,88 @@ option {
         flex-wrap: wrap;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .top .left-side {
+        padding-top: 50px;
+    }
+
+    .top h1 {
+        font-size: 35px;
+    }
+
+    .top p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .top h1 {
+        font-size: 30px;
+    }
+
+    .top p {
+        font-size: 12px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .identity h2 {
+        font-size: 24px;
+    }
+
+    .identity p {
+        font-size: 12px;
+    }
+
+    .middle h1 {
+        font-size: 24px;
+        margin-left: 50px;
+    }
+
+    .middle p {
+        font-size: 12px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .question {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .blue-text {
+        font-size: 12px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+        font-size: 12px;
+    }
+
+    .options label {
+        font-size: 12px;
+    }
+
+    .identity {
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 0px;
+    }
+
+    .nav-buttons button {
+        font-size: 14px;
+    }
+
+    .question-text {
+        margin-left: 0px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .top h1 {
+        font-size: 25px;
+    }
+}
