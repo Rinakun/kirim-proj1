@@ -15,7 +15,62 @@ Route::get('/tes-siswa', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $spiderChartData = [
+        "labels" => ["Disleksia", "Disgrafia", "Diskalkulia", "ADHD", "Tunagrahita", "Pendengaran", "Sosial emosi", "Autis", "Bicara", "Bahasa"],
+        "data" => [10, 10, 20, 30, 50, 20, 70, 100, 80, 50]
+    ];
+
+    $testCount = 210;
+
+    $genderChartData = [
+        "labels" => ["Laki-laki", "Perempuan"],
+        "data" => [110, 100]
+    ];
+
+    $students = [
+        [
+            'id' => 1,
+            'name' => 'John Doe',
+            'gender' => 'Laki-laki',
+            'age' => '7 tahun',
+            'class' => 'Kelas 1',
+            'disorder' => 'ADHD',
+        ],
+        [
+            'id' => 2,
+            'name' => 'John Doe',
+            'gender' => 'Laki-laki',
+            'age' => '5 Tahun',
+            'class' => 'Kelas 1',
+            'disorder' => 'ADHD',
+        ],
+        [
+            'id' => 3,
+            'name' => 'Sarah Smith',
+            'gender' => 'Perempuan',
+            'age' => '16 tahun',
+            'class' => 'SMA 2',
+            'disorder' => 'Autisme',
+        ],
+        [
+            'id' => 4,
+            'name' => 'Alice Johnson',
+            'gender' => 'Perempuan',
+            'age' => '9 tahun',
+            'class' => 'Kelas 3',
+            'disorder' => 'Disleksia',
+        ],
+        [
+            'id' => 5,
+            'name' => 'Alice Johnson',
+            'gender' => 'Perempuan',
+            'age' => '9 tahun',
+            'class' => 'Kelas 3',
+            'disorder' => 'Disleksia',
+        ],
+    ];
+
+    return view('dashboard', compact('spiderChartData', 'testCount', 'genderChartData'), ['students' => $students]);
 });
 
 Route::get('/detail/{id}', function ($id) {
@@ -26,6 +81,8 @@ Route::get('/detail/{id}', function ($id) {
             'age' => '7 tahun',
             'class' => 'Kelas 1',
             'disorder' => 'ADHD',
+            'description' => 'ADHD adalah gangguan yang mempengaruhi perhatian, kontrol impuls, dan tingkat aktivitas seseorang. Attention deficit hyperactivity disorder atau biasa dikenal dengan ADHD adalah kondisi ketika terjadinya gangguan perkembangan saraf yang berpengaruh pada motorik (gerakan) seseorang. ADHD adalah gangguan mental yang kerap kali dialami oleh anak-anak.',
+            'percentage' => 96,
             'otherDisorders' => [
                 ['name' => 'Sosial emosi', 'description' => 'Seseorang akan sering merasa cemas tanpa alasan yang jelas, yang dapat mengganggu aktivitas sehari-hari',  'persen' => '10'],
                 ['name' => 'Disleksia', 'description' => 'Sulit mengingat urutan sesuatu, nisalnya urutan abjad atau nama hari', 'persen' => '20'],

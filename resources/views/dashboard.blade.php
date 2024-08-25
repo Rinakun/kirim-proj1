@@ -7,24 +7,25 @@
         <div class="cards-container">
             <!-- Spider Chart Card -->
             <div class="card">
-                <canvas id="spiderChart" class="spider-chart"></canvas>
+                <canvas id="spiderChart" class="spider-chart" data-labels="{{ json_encode($spiderChartData['labels']) }}"
+                    data-values="{{ json_encode($spiderChartData['data']) }}">
+                </canvas>
             </div>
 
             <!-- Test Count Card -->
             <div class="card">
                 <h2>Tes dilakukan</h2>
-                <p class="count">210 kali</p>
+                <p class="count">{{ $testCount }} kali</p>
                 <img src="assets/images/tes_dilakukan.svg" alt="Test Image">
             </div>
 
             <!-- Gender Comparison Card -->
             <div class="card">
                 <h3>Perbandingan laki-laki dan perempuan</h3>
-                <canvas id="genderChart" class="gender-chart">
+                <canvas id="genderChart" class="gender-chart" data-labels="{{ json_encode($genderChartData['labels']) }}"
+                    data-values="{{ json_encode($genderChartData['data']) }}">
                 </canvas>
-                {{-- <h2 class="chart-text">210</h2> --}}
             </div>
-
         </div>
     </div>
     {{-- CHART END --}}
@@ -43,10 +44,13 @@
             <div class="table-actions">
                 <button id="filter-button"
                     style="border-radius: 32px; background-color: transparent; border: 1px solid #ddd;"><i
-                        class="fa-solid fa-filter" style="margin-right: 10px;"></i>Filter</button>
+                        class="fa-solid fa-filter" style="margin-right: 10px;"></i>Filter
+                </button>
                 <button id="delete-button"
-                    style="border-radius: 32px; background-color: transparent; border: 1px solid #ddd;"><i
-                        class="fa-regular fa-trash-can" style="color: #ff2020; margin-right: 10px; "></i>Hapus</button>
+                    style="border-radius: 32px; background-color: transparent; border: 1px solid #ddd;">
+                    <i class="fa-regular fa-trash-can" style="color: #ff2020; margin-right: 10px;"></i>Hapus
+                </button>
+
             </div>
         </div>
         <table class="students-table">
@@ -62,10 +66,19 @@
                 </tr>
             </thead>
             <tbody id="students-tbody">
-                <!-- Rows will be inserted here by JavaScript -->
+                @foreach ($students as $student)
+                    <tr>
+                        <td><input type="checkbox" value="{{ $student['id'] }}"></td>
+                        <td>{{ $student['name'] }}</td>
+                        <td>{{ $student['gender'] }}</td>
+                        <td>{{ $student['age'] }}</td>
+                        <td>{{ $student['class'] }}</td>
+                        <td>{{ $student['disorder'] }}</td>
+                        <td><button class="detail-button" data-id="{{ $student['id'] }}">detail</button></td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
-
     {{-- TABLE DATA END --}}
 @endsection

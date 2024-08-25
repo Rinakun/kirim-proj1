@@ -11,22 +11,22 @@
             <div class="analysis-grid">
                 <!-- Bagian Chart -->
                 <div class="chart-container">
-                    <canvas id="pieChart" class="piechart"></canvas>
+                    <canvas id="pieChart" class="piechart" data-percentage="{{ $student['percentage'] }}"
+                        data-label="{{ $student['disorder'] }}"></canvas>
                 </div>
                 <!-- Bagian Detail -->
                 <div class="detail-container">
-                    <span class="disorder-label">● ADHD</span>
-                    <h3>ADHD adalah gangguan yang mempengaruhi perhatian, kontrol impuls, dan tingkat aktivitas seseorang
+                    <span class="disorder-label">● {{ $student['disorder'] }}</span>
+                    <h3 data-description="{{ $student['description'] }}">
+                        {{ $student['description'] }}
                     </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur. Vitae elit natoque nec aliquam. Ac enim in pellentesque
-                        suscipit cursus suspendisse. Sed ultrices consequat bibendum amet urna gravida adipiscing. Posuere
-                        massa viverra aliquam arcu scelerisque.</p>
                     <button onclick="window.location.href='{{ url('/') }}'" class="btn-primary">
                         Lanjutkan
                     </button>
                 </div>
             </div>
         </div>
+
 
         <div class="other-disorders">
             @foreach ($otherDisorders as $disorder)
