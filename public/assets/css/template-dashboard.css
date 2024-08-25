@@ -400,10 +400,58 @@ p {
         grid-template-columns: 1fr;
         gap: 10px;
     }
+    .piechart {
+        padding: 30px;
+        height: 250px !important;
+    }
+
+    .detail-container {
+        padding-top: 0px;
+        padding-right: 0px;
+    }
+    h3 {
+        font-size: 12px;
+    }
+    .disorder-card {
+        background-color: white;
+        padding: 20px;
+        border-radius: 12px;
+        width: calc(100% / 4.1);
+    }
+    p {
+        font-size: 10px;
+        color: #666;
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 480px) {
     .card {
         flex: 1 1 100%;
+    }
+    .disorder-card {
+        background-color: white;
+        padding: 20px;
+        border-radius: 12px;
+        width: calc(100% / 1);
+    }
+}
+
+@media (max-width: 425px) {
+    h3 {
+        font-size: 10px;
+    }
+    .piechart {
+        padding: 20px;
+        height: 200px !important;
+    }
+    .analysis-container {
+        padding: 60px;
+    }
+}
+
+@media (max-width: 425px) {
+    .analysis-container {
+        padding: 40px;
     }
 }

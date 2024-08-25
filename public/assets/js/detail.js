@@ -113,6 +113,18 @@ if (ctxPie) {
 
                     ctx.fillText(text, textX, textY);
 
+                    // Mengatur font dan posisi untuk teks "Kemungkinan"
+                    var subFontSize = (height / 190).toFixed(2);
+                    ctx.font = "normal " + subFontSize + "em sans-serif";
+
+                    var subText = "Kemungkinan",
+                        subTextX = Math.round(
+                            (width - ctx.measureText(subText).width) / 2
+                        ),
+                        subTextY = height / 2 + 30;
+
+                    ctx.fillText(subText, subTextX, subTextY);
+
                     ctx.save();
                 },
             },
