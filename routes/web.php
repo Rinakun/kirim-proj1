@@ -76,6 +76,7 @@ Route::get('/dashboard', function () {
 Route::get('/detail/{id}', function ($id) {
     $students = [
         1 => [
+            'id' => 1,
             'name' => 'John Doe',
             'gender' => 'Laki-laki',
             'age' => '7 tahun',
@@ -102,4 +103,72 @@ Route::get('/detail/{id}', function ($id) {
     $student = $students[$id];
 
     return view('detail', ['student' => $student, 'otherDisorders' => $student['otherDisorders']]);
+});
+
+Route::get('/hasil/{id}', function ($id) {
+    $students = [
+        1 => [
+            'name' => 'John Doe',
+            'gender' => 'Laki-laki',
+            'age' => '7 tahun',
+            'class' => 'Kelas 1',
+            'disorder' => 'ADHD',
+            'description' => 'ADHD, atau Attention Deficit Hyperactivity Disorder, adalah kondisi yang mempengaruhi kemampuan seseorang dalam fokus, mengendalikan impuls, dan mengatur tingkat aktivitas. ADHD sering kali terdeteksi pada masa kanak-kanak, namun dapat berlanjut hingga dewasa. Orang dengan ADHD mungkin mengalami kesulitan dalam berkonsentrasi, merasa gelisah, atau bertindak tanpa berpikir terlebih dahulu.',
+            'percentage' => 96,
+            'secondary_disorder' => 'Sedang',
+            'secondary_percentage' => 54,
+            'secondary_description' => 'ADHD tingkat sedang adalah kondisi di mana seseorang mengalami kesulitan dalam memperhatikan, mengendalikan impuls, dan mengatur tingkat aktivitas. Meskipun gejalanya tidak terlalu parah, mereka tetap dapat mempengaruhi kehidupan sehari-hari, terutama dalam situasi yang memerlukan konsentrasi atau perencanaan jangka panjang.',
+            'judul_gejala' => 'ADHD (Attention Deficit Hyperactivity Disorder)',
+            'gejala_umum' => 'Hiperaktif, Impulsif, Kurangnya perhatian',
+            'gejala_spesifik' => [
+                'Sulit untuk disiplin',
+                'Sangat sensitif terhadap kritikan',
+                'Hanya memiliki sedikit teman',
+                'Sulit untuk disiplin',
+                'Sangat sensitif terhadap kritikan',
+                'Hanya memiliki sedikit teman',
+                'Menghindari atau tidak menyukaikegiatan yang membutuhkan usaha berkesinambungan, contohnya duduk diam',
+                'Mengalami kecemasan pada situasibaru atau yang tidak familiar',
+                'Memiliki kecenderungan untuk melamun Sering merasa rendah diri dan tidak percaya diri',
+                'Banyak merasa khawatir dan takut',
+                'Menjawab tanpa berpikir,sementara pertanyaan belum selesai',
+                'Apabila bermain, lebih sering mondar-mandir dan sulit bermaindengan tenang',
+                'Bicara berlebihan Sering menghentak-hentakkan kaki ketika duduk diamSering mengganggu anak-anak lain',
+                'Mengalami kesulitan menunggugilirannya(tidak sabaran) sering mengambil mainan temandengan paksa',
+                'Reaktif, sering merespon kembali apa yang dilakukan kepadanya'
+                // Add other specific symptoms here...
+            ],
+            'diagnosis' => [
+                'Anak tidak memperhatikan detail-detail tertentu serta melakukan tindakan ceroboh saat menjalankan tugas dari sekolah atau pekerjaan dari orangtua.',
+                'Anak kesulitan untuk fokus pada tugas atau kegiatannya.',
+                'Anak tidak mendengar atau memperhatikan saat diajak bicara.',
+                'Anak tidak menjalankan instruksi serta tidak menyelesaikan tugas sekolah.',
+                'Anak kesulitan mengatur tugas dan pekerjaan.',
+                'Anak menghindar dan cenderung tidak suka dengan tugas yang membutuhkan upaya mental berkelanjutan, seperti menyiapkan laporan dan mengisi formulir.',
+                'Anak sering kehilangan barang.Anak tidak fokus dan perhatiannya mudah terganggu.',
+                'Anak sering melupakan tugas sehari-hari.'
+                // Add other diagnosis points here...
+            ],
+            'tujuan_pembelajaran' => [
+                'jangka_pendek' => 'Anak dapat fokus pada setiap hal',
+                'jangka_panjang' => 'Anak tidak kehilangan kefokusannya pada tugas-tugas kecilnya',
+            ],
+            'rekomendasi_aktivitas' => [
+                'Guru memberikan  terapi memusatkan perhatian anak dengan cara anak diajak bermain menebak gambar yang di tunjukan oleh guru.',
+                'Membuat anak mengulangi instruksi',
+                // Add other recommendations here...
+            ],
+            'waktu' => '1 minggu 3 kali',
+            'rekomendasi_evaluasi' => [
+                'harian' => 'Catat perkembangan harian siswa dalam jurnal pembelajaran.',
+                'mingguan' => 'Memberikan penilaian setiap minggu dengan daftar ceklis apakah ada perubahan prilaku pada siswa ADHD',
+                'bulanan' => 'Memberikan refleksi kepada anak dan siswa untuk mendiskusikan kemajuan dan kesulitan.',
+            ],
+        ],
+        // ... other students' data ...
+    ];
+
+    $student = $students[$id];
+
+    return view('hasil', ['student' => $student]);
 });

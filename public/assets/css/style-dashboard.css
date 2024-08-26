@@ -293,6 +293,7 @@ h3 {
     font-size: 16px;
     color: #333;
     margin-bottom: 10px;
+    font-weight: 400;
 }
 
 p {
@@ -368,6 +369,139 @@ p {
 
 /* DETAIL SISWA END */
 
+/* HASIL CHART START */
+.disorder-label1-secondary {
+    background-color: #e0e7ff;
+    color: #007bff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.disorder-label2-secondary {
+    background-color: #fff4e4;
+    color: #e99518;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+    width: fit-content;
+    border: 1px solid #e99518;
+}
+
+.piechart {
+    padding: 50px;
+}
+.chart-text {
+    position: absolute;
+    top: 56%;
+    right: 22%;
+    transform: translate(-50%, -50%);
+    font-size: 24px !important;
+    color: #000 !important;
+    z-index: 1;
+    pointer-events: none; /* Ensure the text doesn't interfere with the chart's hover functionality */
+    font-family: "Inter", sans-serif;
+}
+
+.analysis-grid-chart {
+    flex: 1 1 50%; /* Setiap chart mengambil 50% dari lebar kontainer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    padding-left: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.analysis-grid-chart h2 {
+    color: #000;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    align-self: baseline;
+    font-size: 36px;
+}
+
+.analysis-grid-hasil {
+    display: flex;
+    gap: 20px;
+}
+
+.chart-container-hasil {
+    width: 100%;
+    max-width: 500px;
+}
+
+.chart-container-hasil canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.detail-container-hasil {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-right: 50px;
+    padding-bottom: 40px;
+}
+
+.analysis-container-hasil {
+    background-color: #e9f3ff;
+    padding: 80px;
+}
+
+/* HASIL CHART END */
+
+/* PENJELASAN HASIL START */
+.analysis-container-penjelasan {
+    padding: 80px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.student-info-penjelasan {
+    margin-bottom: 20px;
+}
+
+.analysis-title-penjelasan {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.student-info-penjelasan h2 {
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.student-info-penjelasan p,
+.student-info-penjelasan ul {
+    color: #555;
+    font-size: 16px;
+}
+
+.student-info-penjelasan ul {
+    padding-left: 20px;
+}
+
+.student-info-penjelasan li {
+    margin-bottom: 8px;
+}
+
+/* PENJELASAN HASIL END */
+
 /* Responsiveness */
 @media (max-width: 1024px) {
     .card {
@@ -385,6 +519,10 @@ p {
         width: fit-content;
         display: block;
         box-sizing: border-box;
+    }
+    .disorder-card {
+        width: calc(100% / 3.7);
+        justify-content: space-between;
     }
 
     .card h3 {
@@ -423,6 +561,26 @@ p {
         color: #666;
         margin-bottom: 20px;
     }
+    .analysis-grid-chart h2 {
+        font-size: 25px;
+    }
+    .piechart_secondary {
+        display: block;
+        box-sizing: border-box;
+        height: 164px !important;
+    }
+    .analysis-grid-hasil {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .analysis-grid-chart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1 1 100%;
+        padding: 0px;
+        padding-left: 40px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -434,6 +592,20 @@ p {
         padding: 20px;
         border-radius: 12px;
         width: calc(100% / 1);
+    }
+    .student-info-penjelasan p,
+    .student-info-penjelasan ul {
+        font-size: 13px;
+    }
+
+    .student-info-penjelasan h2 {
+        font-size: 18px;
+    }
+    .analysis-grid-chart {
+        padding-left: 23px;
+    }
+    .detail-container-hasil {
+        padding-right: 20px;
     }
 }
 
@@ -453,5 +625,14 @@ p {
 @media (max-width: 425px) {
     .analysis-container {
         padding: 40px;
+    }
+}
+
+@media (max-width: 375px) {
+    .analysis-grid-chart h2 {
+        font-size: 18px;
+    }
+    .piechart_secondary {
+        height: 120px !important;
     }
 }

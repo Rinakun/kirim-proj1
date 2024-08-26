@@ -20,13 +20,13 @@
                     <h3 data-description="{{ $student['description'] }}">
                         {{ $student['description'] }}
                     </h3>
-                    <button onclick="window.location.href='{{ url('/') }}'" class="btn-primary">
+                    <button onclick="window.location.href='{{ url('/hasil/' . $student['id']) }}'" class="btn-primary">
                         Lanjutkan
                     </button>
+
                 </div>
             </div>
         </div>
-
 
         <div class="other-disorders">
             @foreach ($otherDisorders as $disorder)

@@ -9,7 +9,7 @@
     <link rel="icon" href="assets/images/SIREM.ico">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/template-login_signup.css" />
+    <link rel="stylesheet" href="assets/css/style-login_signup.css" />
 
     <!-- Boxicons CSS -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>

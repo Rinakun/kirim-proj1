@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="{{ asset('assets/css/template-tes.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/template-dashboard.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/style-tes.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/style-dashboard.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>@yield('title', 'SIREM')</title>
     <link rel="icon" href="{{ asset('assets/images/SIREM.ico') }}">

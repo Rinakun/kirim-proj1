@@ -133,3 +133,160 @@ if (ctxPie) {
 } else {
     console.error("Element with id 'pieChart' not found.");
 }
+
+// piechart 1
+var ctxPie1 = document.getElementById("pieChart1");
+
+if (ctxPie1) {
+    var percentage1 = ctxPie1.getAttribute("data-percentage");
+    var disorderLabel1 = ctxPie1.getAttribute("data-label");
+
+    ctxPie1 = ctxPie1.getContext("2d");
+
+    var gradient1 = ctxPie1.createLinearGradient(
+        0,
+        0,
+        0,
+        ctxPie1.canvas.height
+    );
+    gradient1.addColorStop(0, "#4CAEFF");
+    gradient1.addColorStop(1, "#CD0000");
+
+    var pieChart1 = new Chart(ctxPie1, {
+        type: "doughnut",
+        data: {
+            labels: [disorderLabel1],
+            datasets: [
+                {
+                    data: [percentage1, 100 - percentage1],
+                    backgroundColor: [gradient1, "#e9e9e9"],
+                    hoverOffset: 4,
+                },
+            ],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: "70%",
+            plugins: {
+                legend: { display: false },
+                tooltip: { enabled: true },
+            },
+        },
+        plugins: [
+            {
+                id: "textInCenter",
+                beforeDraw: function (chart) {
+                    var width = chart.width,
+                        height = chart.height,
+                        ctx = chart.ctx;
+
+                    ctx.restore();
+
+                    var fontSize = (height / 80).toFixed(2);
+                    ctx.font = "bold " + fontSize + "em sans-serif";
+                    ctx.textBaseline = "middle";
+
+                    var text = percentage1 + "%",
+                        textX = Math.round(
+                            (width - ctx.measureText(text).width) / 2
+                        ),
+                        textY = height / 2 - 10;
+                    ctx.fillText(text, textX, textY);
+
+                    var subFontSize = (height / 190).toFixed(2);
+                    ctx.font = "normal " + subFontSize + "em sans-serif";
+
+                    var subText = "Kemungkinan",
+                        subTextX = Math.round(
+                            (width - ctx.measureText(subText).width) / 2
+                        ),
+                        subTextY = height / 2 + 30;
+                    ctx.fillText(subText, subTextX, subTextY);
+
+                    ctx.save();
+                },
+            },
+        ],
+    });
+} else {
+    console.error("Element with id 'pieChart1' not found.");
+}
+
+// piechart 2
+var ctxPie2 = document.getElementById("pieChart2");
+
+if (ctxPie2) {
+    var percentage2 = ctxPie2.getAttribute("data-percentage");
+    var disorderLabel2 = ctxPie2.getAttribute("data-label");
+
+    ctxPie2 = ctxPie2.getContext("2d");
+
+    var gradient2 = ctxPie2.createLinearGradient(
+        0,
+        0,
+        0,
+        ctxPie2.canvas.height
+    );
+    gradient2.addColorStop(0, "#FF5900");
+    gradient2.addColorStop(1, "#CD0000");
+
+    var pieChart2 = new Chart(ctxPie2, {
+        type: "doughnut",
+        data: {
+            labels: [disorderLabel2],
+            datasets: [
+                {
+                    data: [percentage2, 100 - percentage2],
+                    backgroundColor: [gradient2, "#e9e9e9"],
+                    hoverOffset: 4,
+                },
+            ],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: "70%",
+            plugins: {
+                legend: { display: false },
+                tooltip: { enabled: true },
+            },
+        },
+        plugins: [
+            {
+                id: "textInCenter",
+                beforeDraw: function (chart) {
+                    var width = chart.width,
+                        height = chart.height,
+                        ctx = chart.ctx;
+
+                    ctx.restore();
+
+                    var fontSize = (height / 80).toFixed(2);
+                    ctx.font = "bold " + fontSize + "em sans-serif";
+                    ctx.textBaseline = "middle";
+
+                    var text = percentage2 + "%",
+                        textX = Math.round(
+                            (width - ctx.measureText(text).width) / 2
+                        ),
+                        textY = height / 2;
+                    ctx.fillText(text, textX, textY);
+
+                    // var subFontSize = (height / 190).toFixed(2);
+                    // ctx.font = "normal " + subFontSize + "em sans-serif";
+
+                    // var subText = "Kemungkinan",
+                    //     subTextX = Math.round(
+                    //         (width - ctx.measureText(subText).width) / 2
+                    //     ),
+                    //     subTextY = height / 2 + 30;
+                    // ctx.fillText(subText, subTextX, subTextY);
+                    ctx.save();
+                },
+            },
+        ],
+    });
+} else {
+    console.error("Element with id 'pieChart2' not found.");
+}
