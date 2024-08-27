@@ -172,3 +172,7 @@ Route::get('/hasil/{id}', function ($id) {
 
     return view('hasil', ['student' => $student]);
 });
+
+Route::get('/tentang-kami', function () {
+    return view('tentang');
+});
