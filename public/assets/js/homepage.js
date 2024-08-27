@@ -617,3 +617,27 @@ const ToggleWatchLater = (movie = "", activate = true) => {
         modal.style.display = "none";
     }
 };
+
+$(document).ready(function () {
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 5000, // 5 detik
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1, // 1 item ditampilkan pada layar kecil
+            },
+            600: {
+                items: 2, // 2 item ditampilkan pada layar 600px atau lebih
+            },
+            1000: {
+                items: 3, // 3 item ditampilkan pada layar 1000px atau lebih
+            },
+            1024: {
+                items: 4, // 4 item ditampilkan pada layar 1024px atau lebih
+            },
+        },
+    });
+});

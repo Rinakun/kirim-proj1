@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="assets/css/style-homepage.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Tambahkan CSS Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <title>SIREM</title>
     <link rel="icon" href="assets/images/SIREM.ico">
 </head>
@@ -30,7 +34,7 @@
                 <a href="/dashboard" class="button-container">
                     <h2>Dashboard</h2>
                 </a>
-                <a href="/tentang" class="button-container">
+                <a href="/tentang-kami" class="button-container">
                     <h2>Tentang kami</h2>
                 </a>
             </div>
@@ -78,7 +82,7 @@
             <div class="card2-container">
                 <div class="card2">
                     <div class="icon">
-                        <img src="assets/images/macam.png" alt="Icon">
+                        <img src="assets/images/Disleksia.png" alt="Icon">
                     </div>
                     <h3>Disleksia</h3>
                     <p>Disleksia adalah gangguan belajar yang mempengaruhi kemampuan seseorang dalam membaca dan
@@ -86,7 +90,7 @@
                 </div>
                 <div class="card2">
                     <div class="icon">
-                        <img src="assets/images/macam.png" alt="Icon">
+                        <img src="assets/images/Diskalkulia.png" alt="Icon">
                     </div>
                     <h3>Diskalkulia</h3>
                     <p>Diskalkulia adalah gangguan belajar yang mempengaruhi kemampuan seseorang dalam memahami dan
@@ -94,18 +98,62 @@
                 </div>
                 <div class="card2">
                     <div class="icon">
-                        <img src="assets/images/macam.png" alt="Icon">
+                        <img src="assets/images/Disgrafia.png" alt="Icon">
                     </div>
                     <h3>Disgrafia</h3>
                     <p>Disgrafia adalah gangguan belajar yang mempengaruhi kemampuan menulis tangan dan ejaan.</p>
                 </div>
                 <div class="card2">
                     <div class="icon">
-                        <img src="assets/images/macam.png" alt="Icon">
+                        <img src="assets/images/ADHD.png" alt="Icon">
                     </div>
                     <h3>ADHD</h3>
                     <p>ADHD adalah gangguan yang mempengaruhi perhatian, kontrol impuls, dan tingkat aktivitas
                         seseorang.</p>
+                </div>
+                <div class="card2">
+                    <div class="icon">
+                        <img src="assets/images/Tunagrahita.png" alt="Icon">
+                    </div>
+                    <h3>Tunagrahita</h3>
+                    <p>Siswa mengalami hambatan atau keterlambatan berpikir dibanding siswa normal.</p>
+                </div>
+                <div class="card2">
+                    <div class="icon">
+                        <img src="assets/images/Bahasa.png" alt="Icon">
+                    </div>
+                    <h3>Bahasa</h3>
+                    <p>Kesulitan dalam memahami dan menggunakan kata-kata dengan benar.</p>
+                </div>
+                <div class="card2">
+                    <div class="icon">
+                        <img src="assets/images/Pendengaran.png" alt="Icon">
+                    </div>
+                    <h3>Pendengaran</h3>
+                    <p>Keterlambatan kemampuan bicara dan kemampuan bahasa.</p>
+                </div>
+                <div class="card2">
+                    <div class="icon">
+                        <img src="assets/images/Autisme.png" alt="Icon">
+                    </div>
+                    <h3>Autisme</h3>
+                    <p>Secara umum ASDs ditandai dengan kurangnya interaksi sosial dan komunikasi, serta perilaku
+                        terbatas dan berulang.</p>
+                </div>
+                <div class="card2">
+                    <div class="icon">
+                        <img src="assets/images/Sosial.png" alt="Icon">
+                    </div>
+                    <h3>Sosial emosi</h3>
+                    <p>Seseorang akan sering merasa cemas tanpa alasan yang jelas, yang dapat mengganggu aktivitas
+                        sehari-hari.</p>
+                </div>
+                <div class="card2">
+                    <div class="icon">
+                        <img src="assets/images/Bicara.png" alt="Icon">
+                    </div>
+                    <h3>Bicara</h3>
+                    <p>Kesulitan mengucapkan suara atau kata dengan benar</p>
                 </div>
             </div>
         </div>
@@ -161,54 +209,50 @@
         {{-- conributor start --}}
         <section class="kontributor" id="kontributor">
             <h2>Kontributor</h2>
-            <div class="kontributor-container">
+            <div class="owl-carousel kontributor-container">
                 <div class="kontributor-card">
                     <img src="https://via.placeholder.com/150" alt="Foto Kontributor">
                     <p class="kontributor-quote">“We are all like fireworks: We climb, we shine and always go our
-                        separate ways
-                        and become further apart. But even when that time comes, let’s not disappear like a firework and
-                        continue to shine... forever.”</p>
+                        separate ways and become further apart. But even when that time comes, let’s not disappear like
+                        a firework and continue to shine... forever.”</p>
                     <h3>Rizzone Nadhif K</h3>
                     <p class="kontributor-position">Posisi</p>
                 </div>
                 <div class="kontributor-card">
                     <img src="https://via.placeholder.com/150" alt="Foto Kontributor">
                     <p class="kontributor-quote">“We are all like fireworks: We climb, we shine and always go our
-                        separate ways
-                        and become further apart. But even when that time comes, let’s not disappear like a firework and
-                        continue to shine... forever.”</p>
+                        separate ways and become further apart. But even when that time comes, let’s not disappear like
+                        a firework and continue to shine... forever.”</p>
                     <h3>Nama</h3>
                     <p class="kontributor-position">Posisi</p>
                 </div>
                 <div class="kontributor-card">
                     <img src="https://via.placeholder.com/150" alt="Foto Kontributor">
                     <p class="kontributor-quote">“We are all like fireworks: We climb, we shine and always go our
-                        separate ways
-                        and become further apart. But even when that time comes, let’s not disappear like a firework and
-                        continue to shine... forever.”</p>
+                        separate ways and become further apart. But even when that time comes, let’s not disappear like
+                        a firework and continue to shine... forever.”</p>
                     <h3>Nama</h3>
                     <p class="kontributor-position">Posisi</p>
                 </div>
                 <div class="kontributor-card">
                     <img src="https://via.placeholder.com/150" alt="Foto Kontributor">
                     <p class="kontributor-quote">“We are all like fireworks: We climb, we shine and always go our
-                        separate ways
-                        and become further apart. But even when that time comes, let’s not disappear like a firework and
-                        continue to shine... forever.”</p>
+                        separate ways and become further apart. But even when that time comes, let’s not disappear like
+                        a firework and continue to shine... forever.”</p>
                     <h3>Nama</h3>
                     <p class="kontributor-position">Posisi</p>
                 </div>
                 <div class="kontributor-card">
                     <img src="https://via.placeholder.com/150" alt="Foto Kontributor">
                     <p class="kontributor-quote">“We are all like fireworks: We climb, we shine and always go our
-                        separate ways
-                        and become further apart. But even when that time comes, let’s not disappear like a firework and
-                        continue to shine... forever.”</p>
+                        separate ways and become further apart. But even when that time comes, let’s not disappear like
+                        a firework and continue to shine... forever.”</p>
                     <h3>Nama</h3>
                     <p class="kontributor-position">Posisi</p>
                 </div>
             </div>
         </section>
+
     </div>
     {{-- contributor end --}}
 
@@ -278,6 +322,8 @@
     </footer>
     {{-- footer end --}}
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="assets/js/homepage.js"></script>
 </body>
 

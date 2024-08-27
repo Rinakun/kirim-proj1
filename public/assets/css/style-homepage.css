@@ -223,7 +223,7 @@ a {
     min-height: 650px;
     display: flex;
     align-items: center;
-    background-image: url(../images/dashboard.svg);
+    background-image: url(../images/home.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -446,6 +446,8 @@ a {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .card2 {
@@ -453,7 +455,7 @@ a {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    max-width: 200px;
+    max-width: 180px;
     text-align: left;
     transition: transform 0.3s;
     position: relative;
@@ -470,8 +472,8 @@ a {
 }
 
 .icon img {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     margin-bottom: 20px;
 }
 
@@ -479,7 +481,7 @@ a {
     color: #333;
     font-size: 24px;
     margin-bottom: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .card2 p {
@@ -494,11 +496,12 @@ a {
     flex-wrap: wrap; /* Agar kolom tetap rapi saat layar kecil */
     align-items: center; /* Mengatur konten di tengah secara vertikal */
     margin: 40px;
+    padding-right: 40px;
 }
 
 .left-column2 {
     flex: 1;
-    padding-right: 60px; /* Memberikan sedikit jarak antara kolom teks dan gambar */
+    padding-right: 80px; /* Memberikan sedikit jarak antara kolom teks dan gambar */
 }
 
 .right-column2 {
@@ -569,7 +572,21 @@ a {
     font-size: 2rem;
     font-family: "Inter", sans-serif;
     color: #0066ff;
-    margin-bottom: 80px;
+    /* margin-bottom: 20px; */
+}
+
+.owl-carousel .owl-item {
+    min-height: 352px !important;
+    float: left;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    font-size: 30px !important;
+    margin-right: 20px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    font-size: 30px !important;
 }
 
 .kontributor-container {
@@ -586,9 +603,11 @@ a {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     padding: 50px 20px 20px; /* Tambahkan padding atas untuk memberi ruang bagi gambar */
     text-align: center;
-    max-width: 180px;
+    max-width: 220px;
     flex: 1 1 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 80px;
+    margin-left: 30px;
 }
 
 .kontributor-card:hover {
@@ -601,8 +620,8 @@ a {
     top: -50px; /* Mengangkat gambar ke atas */
     left: 50%;
     transform: translateX(-50%);
-    width: 100px;
-    height: 100px;
+    width: 120px !important;
+    height: 120px !important;
     border-radius: 50%;
     margin-bottom: 20px;
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
@@ -1065,6 +1084,8 @@ hr {
         padding-top: 40px; /* Sesuaikan padding atas untuk ruang gambar */
         margin-bottom: 40px; /* Tambahkan jarak antara kartu */
         max-height: 200px;
+        margin-top: 30px;
+        margin-left: 50px;
     }
 
     .kontributor-card img {
@@ -1087,7 +1108,7 @@ hr {
         font-size: 2rem;
         font-family: "Inter", sans-serif;
         color: #0066ff;
-        margin-bottom: 30px;
+        margin-bottom: 0px;
     }
 }
 
@@ -1285,6 +1306,7 @@ hr {
         padding-top: 40px; /* Sesuaikan padding atas untuk ruang gambar */
         margin-bottom: 40px; /* Tambahkan jarak antara kartu */
         max-height: 250px;
+        margin-left: 55px;
     }
 
     .footer-distributed .footer-center p span {
@@ -1313,5 +1335,15 @@ hr {
         margin: 0;
         font-family: "Inter", sans-serif;
         font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .kontributor-card {
+        max-width: 60%; /* Agar kartu lebih kecil pada layar mobile */
+        padding-top: 40px; /* Sesuaikan padding atas untuk ruang gambar */
+        margin-bottom: 40px; /* Tambahkan jarak antara kartu */
+        max-height: 250px;
+        margin-left: 35px;
     }
 }
