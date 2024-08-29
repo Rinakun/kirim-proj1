@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ResultsController;
+
+Route::post('/submit-results', [ResultsController::class, 'store']);
+
+
 Route::get('/', function () {
     return view('homepage');
 });
