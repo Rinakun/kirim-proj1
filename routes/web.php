@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ResultsController;
 
-Route::post('/submit-results', [ResultsController::class, 'store']);
+Route::post('/submit-results', [ResultsController::class, 'store'])->name('submit-results');
 
 
 Route::get('/', function () {

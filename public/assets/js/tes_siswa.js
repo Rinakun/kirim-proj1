@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         'PENDENGARAN Saya kesulitan mendengar',  
     ];  
 
-    const totalQuestions = 6  
+    const totalQuestions = 3;  
     const questionsPerPage = 3;  
     let currentQuestionIndex = 0;  
     let answeredQuestions = 0;  
@@ -252,59 +252,86 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("submit-btn").style.display = "none";  
     };  
 
-    window.submitForm = function (event) {  
-        event.preventDefault();  
-        
-        const unansweredQuestions = answers.filter((answer) => answer === null);  
-        
-        if (unansweredQuestions.length > 0) {  
-            Swal.fire({  
-                icon: "error",  
-                title: "Belum Lengkap!",  
-                text: "Pastikan semua pertanyaan telah dijawab sebelum submit.",  
-                confirmButtonText: "OK",  
-            });  
-        } else {  
-            adhd = 0;  
-            dislexia = 0;  
-            pendengaran = 0;  
+window.submitForm = function (event) {
+        event.preventDefault();
 
-            answers.forEach((answer, index) => {  
-                let questionText = questions[index];  
-                let category = "";  
-                if (questionText.includes("ADHD")) {  
-                    category = "ADHD";  
-                } else if (questionText.includes("DISLEKSIA")) {  
-                    category = "DISLEKSIA";  
-                } else if (questionText.includes("PENDENGARAN")) {  
-                    category = "PENDENGARAN";  
-                }  
-                const poin = poin_soal[answer];  
-                if (category === "ADHD") {  
-                    adhd += poin;  
-                } else if (category === "DISLEKSIA") {  
-                    dislexia += poin;  
-                } else if (category === "PENDENGARAN") {  
-                    pendengaran += poin;  
-                }  
-            });  
+        const unansweredQuestions = answers.filter((answer) => answer === null);
 
-            // Call renderResult to display the results  
-            renderResult();  
+        if (unansweredQuestions.length > 0) {
+            Swal.fire({
+                icon: "error",
+                title: "Belum Lengkap!",
+                text: "Pastikan semua pertanyaan telah dijawab sebelum submit.",
+                confirmButtonText: "OK",
+            });
+        } else {
+            adhd = 0;
+            dislexia = 0;
+            pendengaran = 0;
 
-            Swal.fire({  
-                icon: "success",  
-                title: "Terima kasih!",  
-                text: "Jawaban Anda telah berhasil disubmit.",  
-                confirmButtonText: "OK",  
-            });  
-        }  
-    };  
+            answers.forEach((answer, index) => {
+                let questionText = questions[index];
+                let category = "";
 
-    renderQuestions();  
+                if (questionText.includes("ADHD")) {
+                    category = "ADHD";
+                } else if (questionText.includes("DISLEKSIA")) {
+                    category = "DISLEKSIA";
+                } else if (questionText.includes("PENDENGARAN")) {
+                    category = "PENDENGARAN";
+                }
 
-    document.getElementById("prev-btn").style.display = "none";  
-});  
+                const poin = poin_soal[answer];
+
+                if (category === "ADHD") {
+                    adhd += poin;
+                } else if (category === "DISLEKSIA") {
+                    dislexia += poin;
+                } else if (category === "PENDENGARAN") {
+                    pendengaran += poin;
+                }
+            });
+
+            fetch('/submit-results', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                },
+                body: JSON.stringify({
+                    adhd: adhd,
+                    dislexia: dislexia,
+                    pendengaran: pendengaran
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                renderResult();
+                Swal.fire({
+                    icon: "success",
+                    title: "Terima kasih!",
+                    text: "Jawaban Anda telah berhasil disubmit.",
+                    confirmButtonText: "OK",
+                });
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                Swal.fire({
+                    icon: "error",
+                    title: "Gagal!",
+                    text: "Terjadi kesalahan saat menyimpan jawaban Anda.",
+                    confirmButtonText: "OK",
+                });
+            });
+        }
+    };
+
+    // Other functions like renderQuestions, updateProgressBar, etc.
+    renderQuestions();
+
+    document.getElementById("prev-btn").style.display = "none";
+});
 
 const hamburger = document.querySelector(".hamburger");  
 const mainNav = document.querySelector(".main-nav");  

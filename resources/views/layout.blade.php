@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="{{ asset('assets/css/style-tes.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/style-dashboard.css') }}" />
