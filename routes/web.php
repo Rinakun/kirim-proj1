@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;  
+use App\Models\Result;
+use App\Http\Controllers\ResultsController;
+
+Route::post('/submit-results', [ResultsController::class, 'store'])->name('submit-results');
+
 
 Route::get('/', function () {
     return view('homepage');
@@ -110,6 +114,8 @@ Route::get('/dashboard', function () {
 })-> name('dashboard');
 
 Route::get('/detail/{id}', function ($id) {
+    $condition = Result::where('id', 1)->value('adhd');
+    echo ($condition);
     $students = [
         1 => [
             'id' => 1,
@@ -119,7 +125,7 @@ Route::get('/detail/{id}', function ($id) {
             'class' => 'Kelas 1',
             'disorder' => 'ADHD',
             'description' => 'ADHD adalah gangguan yang mempengaruhi perhatian, kontrol impuls, dan tingkat aktivitas seseorang. Attention deficit hyperactivity disorder atau biasa dikenal dengan ADHD adalah kondisi ketika terjadinya gangguan perkembangan saraf yang berpengaruh pada motorik (gerakan) seseorang. ADHD adalah gangguan mental yang kerap kali dialami oleh anak-anak.',
-            'percentage' => 96,
+            'percentage' => $condition / 30,
             'otherDisorders' => [
                 ['name' => 'Sosial emosi', 'description' => 'Seseorang akan sering merasa cemas tanpa alasan yang jelas, yang dapat mengganggu aktivitas sehari-hari',  'persen' => '10'],
                 ['name' => 'Disleksia', 'description' => 'Sulit mengingat urutan sesuatu, nisalnya urutan abjad atau nama hari', 'persen' => '20'],
