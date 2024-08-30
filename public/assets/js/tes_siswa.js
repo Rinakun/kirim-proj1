@@ -5,6 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
     let answeredQuestions = 0;
     const answeredQuestionsTracker = new Set(); // To track answered questions
     const answers = new Array(totalQuestions).fill(null); // To store answers
+ 
+
+    const jawaban = {  
+        'Sangat Tidak Setuju': 0,  
+        'Tidak Setuju': 1,  
+        'Netral': 2,  
+        'Setuju': 3,  
+        'Sangat Setuju': 4  
+    };  
+    
 
     const questions = [
         "Mispronounce (or used to) only certain words (e.g., says amnuil for animal, poothpaste for toothpaste)?",
@@ -36,11 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const questionContainer = document.getElementById("question-container");
         questionContainer.innerHTML = "";
 
-        for (
-            let i = currentQuestionIndex;
-            i < currentQuestionIndex + questionsPerPage;
-            i++
-        ) {
+        for (let i = currentQuestionIndex; i < currentQuestionIndex + questionsPerPage; i++) {
             if (i >= totalQuestions) break;
 
             const questionDiv = document.createElement("div");

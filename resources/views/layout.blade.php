@@ -16,7 +16,9 @@
     {{-- navbar start --}}
     <div class="header">
         <div class="brand">
-            <img src="{{ asset('assets/images/SIREMBlue.png') }}" alt="" style="height: 30px; width: 100px">
+            <a href="{{ url('/') }}"> <!-- Mengarahkan ke homepage -->
+                <img src="assets/images/SIREM.png" alt="SIREM Logo" style="height: 30px; width: 100px; filter: brightness(0) saturate(100%) invert(64%) sepia(76%) saturate(406%) hue-rotate(170deg) brightness(95%) contrast(94%);">
+            </a>
         </div>
         <div class="hamburger">
             <i class="fas fa-bars"></i>
@@ -36,6 +38,14 @@
         <div class="right-nav">
             <div class="button-container login">
                 <h2><a href="/login">Daftar sekarang</a></h2>
+            </div>
+            <div class="button-container logout">
+                <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                    @csrf
+                    <button type="submit" style="background-color: transparent; border: none; cursor: pointer;">
+                        <h2>Logout</h2>
+                    </button>
+                </form>
             </div>
         </div>
     </div>

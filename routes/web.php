@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;  
 
 Route::get('/', function () {
     return view('homepage');
@@ -8,11 +9,46 @@ Route::get('/', function () {
 
 Route::get('/login', function () {
     return view('daftar_masuk');
+})->middleware('guest')->name('login');
+
+
+// Route::post('/login', [AuthController::class, 'login'])->name('login');
+// Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+
+Route::post('/login-masuk', [AuthController::class, 'login'])-> name('login-masuk');;  
+
+Route::get('/logout', [AuthController::class, 'destroy']);  
+
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/', function () {
+    return view('homepage');
 });
+
+// route::get('/signup', [AuthController::class, 'signup'])->name('signup'); 
+Route::get('/signup', function () {
+    return view('daftar_masuk');
+})->name('daftar_masuk');
+ Route::post('/signup', [AuthController::class, 'signup'])->name('signup');
+// Route::post('/signup', [AuthController::class, 'signup'])->name('signup');
+// Route::post('/signup', [AuthController::class, 'signup'])->name('signup');
+// Route::get('/signup', function () { 
+//     return view('daftar_masuk');
+// });
+
+// Auth for sudah login
+Route::middleware(['auth'])->group(function () {
+  
+    // Route::get('/login', function () {
+    //     return view('dashboard');
+    // })->name('login');
+    
 
 Route::get('/tes-siswa', function () {
     return view('tes_siswa');
 });
+
+
 
 Route::get('/dashboard', function () {
     $spiderChartData = [
@@ -71,7 +107,7 @@ Route::get('/dashboard', function () {
     ];
 
     return view('dashboard', compact('spiderChartData', 'testCount', 'genderChartData'), ['students' => $students]);
-});
+})-> name('dashboard');
 
 Route::get('/detail/{id}', function ($id) {
     $students = [
@@ -104,6 +140,8 @@ Route::get('/detail/{id}', function ($id) {
 
     return view('detail', ['student' => $student, 'otherDisorders' => $student['otherDisorders']]);
 });
+
+
 
 Route::get('/hasil/{id}', function ($id) {
     $students = [
@@ -175,4 +213,6 @@ Route::get('/hasil/{id}', function ($id) {
 
 Route::get('/tentang-kami', function () {
     return view('tentang');
+});
+
 });

@@ -21,8 +21,9 @@
         <div class="header">
             <div class="brand">
                 {{-- <h1 class="logo">SIREM</h1> --}}
-                <img src="assets/images/SIREM.png" alt="" style="height: 30px; width: 100px">
-
+                <a href="{{ url('/') }}"> <!-- Mengarahkan ke homepage -->
+                    <img src="assets/images/SIREM.png" alt="SIREM Logo" style="height: 30px; width: 100px">
+                </a>
             </div>
             <div class="main-nav">
                 {{-- <a href="/" class="button-container">
@@ -41,6 +42,16 @@
             <div class="right-nav">
                 <div class="button-container login" h>
                     <h2><a href="/login">Daftar sekarang</a></h2>
+                </div>
+                
+                {{-- Logout Button --}}
+                <div class="button-container logout">
+                    <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                        @csrf
+                        <button type="submit" style="background-color: transparent; border: none; cursor: pointer;">
+                            <h2>Logout</h2>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
